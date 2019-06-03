@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Mogra&display=swap" rel="stylesheet">
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     
     <title>Jiwon Yoon</title>
 </head>
@@ -22,14 +25,29 @@
         <!-- INTRO -->
         <div class="introOuter">
             <div class="introInner">
-
+                <div class="homeBtn"><a href="#">HOME</a></div>
+                <div class="menuBtnBox">
+                    <div class="menuBar menuBarTop"></div>
+                    <div class="menuBar menuBarMid"></div>
+                    <div class="menuBar menuBarBot"></div>
+                </div>
+                
+                <div class="introMain">
+                    SOME ANIMATION EFFECTS
+                </div>
+                
+                <div class="menuPage">
+                    <div class="menuPageContent">
+                        <div class="menus">
+                            <div class="menuLabel"><a href="#">About Me</a></div>
+                            <div class="menuLabel"><a href="#">Projects</a></div>
+                            <div class="menuLabel"><a href="#">Reflections</a></div>
+                            <div class="menuLabel"><a href="#">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-
-
-
 
 
     <!-- #wrap closing div -->
@@ -50,7 +68,21 @@
 
     <!-- Custom JavaScript -->
     <script>
-    
+        $(document).ready(function(){
+            var $menuBtnBox = $('.menuBtnBox'),
+                $menuPage = $('.menuPage'),
+                $menuPageContent = $('.menuPageContent');
+
+            $menuBtnBox.on('click', function(){
+                $(this).toggleClass('buttonOpen');
+                $menuPage.toggleClass('menuPageShow');
+                setTimeout(function(){
+                    $menuPageContent.toggleClass('menuPageContentShow');
+                }, 350);
+            });
+
+
+        });
     </script>
 </body>
 
