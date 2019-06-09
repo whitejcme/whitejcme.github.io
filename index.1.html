@@ -22,29 +22,32 @@
 
 <body>
     <div id="wrap">
-        <section class="pictureContainer">
-            <div class="pictureFrame">
-                In Progress
-                
-                
-                
-                
-                <!-- <div class="horizon">
-                    <div class="wave wave1"></div>
-                    <div class="wave wave2"></div>
-                    <div class="wave wave3"></div>
-                    <div class="wave wave4"></div>
-                    <div class="land"></div>
-                </div>
-                <div class="oceanBg"></div>
-                <div class="landBg"></div> -->
-            </div>
-        </section>
-        <section class="second">
 
-        </section>
+        <div class="introContainer">
+            
+            <div class="homeBtn"><a href="#">HOME</a></div>
+            <div class="menuBtnBox">
+                <div class="menuBar menuBarTop"></div>
+                <div class="menuBar menuBarMid"></div>
+                <div class="menuBar menuBarBot"></div>
+            </div>
+            
+            <div class="introMain">
+                SOME ANIMATION EFFECTS
+            </div>
+            
+            <div class="menuPage">
+                <div class="menuPageContent">
+                    <div class="menus">
+                        <div class="menuLabel"><a href="#">About Me</a></div>
+                        <div class="menuLabel"><a href="projects.html">Projects</a></div>
+                        <div class="menuLabel"><a href="#">Reflections</a></div>
+                        <div class="menuLabel"><a href="contact.html">Contact</a></div>
+                    </div>
+                </div>
+            </div>
         
-        
+        </div> <!-- .introContainer closing div -->
     </div> <!-- #wrap closing div -->
 
     <!-- Optional JavaScript -->
@@ -62,7 +65,19 @@
 
     <!-- Custom JavaScript -->
     <script>
+        $(document).ready(function(){
+            var $menuBtnBox = $('.menuBtnBox'),
+                $menuPage = $('.menuPage'),
+                $menuPageContent = $('.menuPageContent');
 
+            $menuBtnBox.on('click', function(){
+                $(this).toggleClass('buttonOpen');
+                $menuPage.toggleClass('menuPageShow');
+                setTimeout(function(){
+                    $menuPageContent.toggleClass('menuPageContentShow');
+                }, 350);
+            });
+        });
     </script>
 </body>
 

@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******************************** */
+/* ******** CONTACT ME ************ */
+/* ******************************** */
+
+.sectionTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.contactCard {
+    width: 100%;
+    height: 250px;
+    margin: 50px auto;
+    /* border: 1px solid; */
+    position: relative;
+}
+@media screen and (min-width: 576px) {
+    .contactCard {
+        width: 450px;
+        height: 300px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .contactCard {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+
+
+/* ******************************** */
+/* ******** PROJECTS ************ */
+/* ******************************** */
+
+
+
+

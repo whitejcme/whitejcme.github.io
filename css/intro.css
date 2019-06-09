@@ -1,0 +1,114 @@
+.pictureContainer {
+    width: 100%;
+    padding-top: 80%;
+    position: relative;
+}
+@media screen and (min-width: 576px) {
+    .pictureContainer {
+        padding-top: 56%;
+    }
+}
+@media screen and (min-width: 992px) {
+    .pictureContainer {
+        padding-top: 40%;
+    }
+}
+
+.pictureFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: lightblue;
+}
+
+
+
+
+
+
+
+/*
+.horizon {
+    width: 100%;
+    position: absolute;
+    height: 65%;
+    bottom: 0;
+    left: 0;
+}
+.wave {
+    position: relative;
+    height: 70px;
+    background: transparent;
+    float: left;
+}
+.wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 50%;
+    height: 70px;
+    background-color: cornflowerblue;
+    left: 0;
+    top: 27px;
+}
+.wave::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 70%;
+    height: 80px;
+    background-color: cornflowerblue;
+    right: -5px;
+    top: 40px;
+}
+
+.wave1 {width: 15%;}
+.wave2 {width: 25%;}
+.wave3 {width: 20%;}
+.wave4 {width: 40%;}
+.wave2::before {width: 35%;}
+.wave2::after {width: 80%;}
+.wave4::before {width: 60%; background-color: forestgreen;}
+.wave4::after {width: 60%; background-color: forestgreen;}
+.wave3::before {background-color: tan;}
+.wave3::after {background-color: tan;}
+
+.land {
+    position: absolute;
+    right: -30%;
+    top: -20%;
+    width: 65%;
+    height: 80%;
+    border-radius: 45%;
+    background: linear-gradient(to bottom, transparent 50%, forestgreen 50%);
+}
+
+.oceanBg {
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background-color: cornflowerblue;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+.second {
+    width: 100%;
+    height: 1000px;
+    background-color: #EEEEEE;
+}
