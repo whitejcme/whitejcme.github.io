@@ -1,13 +1,19 @@
 
-
-#wrap {
-    position: absolute;
-    width: 90%;
-    padding-top: 55%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+@keyframes bookRise {
+    0% {top: 10%;}
+    95% {top: 4%;}
+    100% {top: 5%;}
 }
+#wrap {
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 10%;
+    animation: bookRise 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
 .bookContainer {
     position: absolute;
     top: 0;
@@ -15,13 +21,15 @@
     right: 0;
     bottom: 0;
     background-color: #8B4513;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 10px;
 }
-.pages {
-    width: 50%;
-    float: left;
+
+.pg1_castle {
+    width: 90%;
+    margin: 0 auto;
 }
+
 
 .contactCard {
     width: 80%;
