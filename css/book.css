@@ -1,0 +1,33 @@
+
+
+#wrap {
+    position: absolute;
+    width: 90%;
+    padding-top: 55%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.bookContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8B4513;
+    border-radius: 10px;
+    padding: 10px;
+}
+.pages {
+    width: 50%;
+    float: left;
+}
+
+.contactCard {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    position: relative;
+}
+
+

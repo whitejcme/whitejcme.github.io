@@ -2,6 +2,7 @@
     width: 100%;
     padding-top: 80%;
     position: relative;
+    margin-top: 20%;
 }
 @media screen and (min-width: 576px) {
     .pictureContainer {
@@ -180,44 +181,3 @@
 }
 
 
-
-
-
-
-
-
-
-.welcome {
-    width: 100%;
-    height: 1000px;
-    background-color: #EEEEEE;
-}
-.animate span{
-	position: relative;
-    text-align: center;
-    float: left;
-    left: 50%;
-}
-.animate span:nth-child(2), .animate span:nth-child(4) {
-    clear: both;
-}
-.animate.backwards > span{
-	animation: animateBackwards 1s ease-in-out forwards;
-}
-.animate.forwards > span{
-	animation: animateForwards 1s ease-in-out forwards;
-}
-.animate.mixed > span:nth-child(even){
-	animation: animateBackwards 1s ease-in-out forwards;
-}
-.animate.mixed > span:nth-child(odd){
-	animation: animateForwards 1s ease-in-out forwards;
-}
-@keyframes animateForwards {
-	from { top: 0; transform: rotate(0deg); }
-	to { top: .9em; transform: rotate(-5deg); }
-}
-@keyframes animateBackwards {
-	from { top: 0; transform: rotate(0deg); }
-	to { top: 1em; transform: rotate(10deg); }
-}
