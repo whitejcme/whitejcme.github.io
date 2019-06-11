@@ -1,19 +1,25 @@
+
+/* * * * * PICTURE FRAME* * * * * * * * * * * * * * * * * */
+
 .pictureContainer {
     width: 100%;
-    padding-top: 80%;
+    padding-top: 120%;
     position: relative;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 @media screen and (min-width: 576px) {
     .pictureContainer {
-        padding-top: 70%;
-        /* margin-top: 15% */
+        padding-top: 100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .pictureContainer {
+        padding-top: 85%;
     }
 }
 @media screen and (min-width: 992px) {
     .pictureContainer {
-        padding-top: 60%;
-        /* margin-top: 5%; */
+        padding-top: 70%;
     }
 }
 
@@ -49,17 +55,20 @@
 }
 
 
-/* CASTLE */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+
+/* * * * * CASTLE (CENTER) MAIN BUILDING * * * * * */
 
 .castle {
     position: absolute;
-    /* background-color: gray; */
-    /* border: 1px gray; */
     bottom: 0;
 }
 .castle.mainBd {
     width: 30%;
-    height: 40%;
+    height: 30%;
     left: 50%;
     transform: translate(-50%);
     background-color: #9F4622;
@@ -68,19 +77,19 @@
     width: 10%;
     bottom: 100%;
     background-color: #9F4622;
-    border-top: 15px solid #4D4B4E;
+    border-top: 10px solid #4D4B4E;
 }
-.castle.mainBdTop:nth-child(1) {height: 15%; left: 15%;}
-.castle.mainBdTop:nth-child(2) {height: 22%; left: 25%;}
-.castle.mainBdTop:nth-child(3) {height: 29%; left: 35%;}
-.castle.mainBdTop:nth-child(4) {height: 36%; left: 45%;}
-.castle.mainBdTop:nth-child(5) {height: 29%; right: 35%;}
-.castle.mainBdTop:nth-child(6) {height: 22%; right: 25%;}
-.castle.mainBdTop:nth-child(7) {height: 15%; right: 15%;}
+.castle.mainBdTop:nth-child(1) {height: 10%; left: 15%;}
+.castle.mainBdTop:nth-child(2) {height: 15%; left: 25%;}
+.castle.mainBdTop:nth-child(3) {height: 20%; left: 35%;}
+.castle.mainBdTop:nth-child(4) {height: 25%; left: 45%;}
+.castle.mainBdTop:nth-child(5) {height: 20%; right: 35%;}
+.castle.mainBdTop:nth-child(6) {height: 15%; right: 25%;}
+.castle.mainBdTop:nth-child(7) {height: 10%; right: 15%;}
 
 .castle.mainGate {
     width: 20%;
-    height: 30%;
+    height: 25%;
     left: 40%;
     background: #968662;
 }
@@ -98,9 +107,13 @@
     border-radius: 50%;
 }
 
+
+
+/* * * * * CASTLE SIDE BUILDINGS * * * * * */
+
 .castle.sideBd  {
     width: 20%;
-    height: 30%;
+    height: 20%;
     background-color: #9F4622;
     border: 5px solid #968662;
     border-bottom: none;
@@ -140,9 +153,11 @@
 
 
 
+/* * * * * CASTLE TOWERS * * * * * */
+
 .castle.tower {
     width: 10%;
-    height: 40%;
+    height: 30%;
     background: linear-gradient(to right, #b6a377 50%, #968662 50%);
 }
 .castle.towerL {
@@ -166,6 +181,22 @@
     border-bottom: 100px solid #4D4B4E;
     bottom: 100%;
 }
+
+.castle.towerTriRotateOuter {
+    width: calc(100% / 1.4142);
+    padding-top: calc(100% / 1.4142);
+    left: 15%;
+    bottom: 80%;
+    transform: rotate(-45deg);
+    transform-origin: 70% 60%;
+}
+.castle.towerTriRotateInner {
+    width: 100%; height: 100%;
+    background-color: #4D4B4E;
+    border-radius: 100% 0% 0% 100% / 0% 0% 100% 100%;
+}
+
+
 .castle.towerMidDeco {
     bottom: 50%;
     width: calc(100% / 7);
