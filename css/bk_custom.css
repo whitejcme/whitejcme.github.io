@@ -22,7 +22,8 @@ body {
 } */
 
 .js body {
-	overflow: hidden;
+	/* overflow: hidden; */
+	overflow-y: auto;
 }
 
 /* a {
