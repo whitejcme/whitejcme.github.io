@@ -14,12 +14,12 @@
 }
 @media screen and (min-width: 768px) {
     .pictureContainer {
-        padding-top: 85%;
+        padding-top: 80%;
     }
 }
 @media screen and (min-width: 992px) {
     .pictureContainer {
-        padding-top: 70%;
+        padding-top: 60%;
     }
 }
 
@@ -29,12 +29,12 @@
     left: 0;
     right: 0;
     bottom: 0;
+    border-radius: 5px;
     background: linear-gradient(to right, rgb(199, 230, 255), rgb(220, 238, 253), rgb(199, 230, 255)) ;
 }
 .frameSec {
     float: left;
     height: 100%;
-    /* border: 1px solid; */
     position: relative;
 }
 .frameL, .frameR {
@@ -42,7 +42,7 @@
 }
 .frameM {
     width: 100%;
-    border-bottom: 10px solid rgb(61, 9, 9);
+    border-bottom: 15px solid rgb(59, 90, 78);
 }
 @media screen and (min-width: 576px) {
     .frameL, .frameR {
@@ -56,28 +56,193 @@
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-
-
-
-/* * * * * CASTLE (CENTER) MAIN BUILDING * * * * * */
+/* * * * * * * * * * *  C A S T L E  * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 .castle {
     position: absolute;
     bottom: 0;
 }
+
+.castle.towerTriRotateOuter {
+    width: calc(100% / 1.4142);
+    padding-top: calc(100% / 1.4142);
+    left: 15%;
+    bottom: 80%;
+    transform: rotate(-45deg);
+    transform-origin: 70% 60%;
+}
+.castle.towerTriRotateInner {
+    width: 100%; height: 100%;
+    background: linear-gradient(to right bottom, rgb(90, 104, 109), rgb(48, 58, 59));
+    border-radius: 100% 0% 0% 100% / 0% 0% 100% 100%;
+}
+
+
+/* * * * * CENTER BACK TOWER (TALLEST) * * * * * */
+
+.castle.backTallestTower {
+    width: 9.5%;
+    height: 70%;
+    left: 43%;
+    background-color: rgb(148, 155, 158);
+}
+.castle.backTallestTowerMid {
+    width: 120%;
+    height: 5%;
+    left: -10%;
+    bottom: 100%;
+    background-color: rgb(187, 179, 134);
+}
+.castle.backTallestTowerMid > .castle.towerTriRotateOuter {
+    bottom: 44%;
+}
+
+/* * * * * BACK MAIN BLDG * * * * * */
+
+.castle.backMainBd {
+    width: 38%;
+    height: 39%;
+    background-color: rgb(163, 167, 163);
+    left: 31%;
+}
+.castle.backMainBdTop {
+    background-image: linear-gradient(to right, rgb(163, 167, 163) 10%, rgb(187, 179, 134) 10%, rgb(187, 179, 134) 90%, rgb(163, 167, 163) 90%);
+    left: 50%;
+    transform: translate(-50%);
+    height: 5%;
+    border-left: 10px solid rgb(90, 104, 109);
+    border-right: 10px solid rgb(90, 104, 109);
+}
+.castle.backMainBdTop:nth-of-type(1) {
+    width: 95%;
+    bottom: 100%;
+}
+.castle.backMainBdTop:nth-of-type(2) {
+    width: 83%;
+    bottom: 105%;
+}
+.castle.backMainBdTop:nth-of-type(3) {
+    width: 71%;
+    bottom: 110%;
+}
+.castle.backMainBdTop:nth-of-type(4) {
+    width: 59%;
+    bottom: 115%;
+}
+.castle.backMainBdTop:nth-of-type(5) {
+    width: 47%;
+    bottom: 120%;
+}
+.castle.backMainBdTop:nth-of-type(6) {
+    width: 35%;
+    bottom: 125%;
+}
+.castle.backMainBdTop:nth-of-type(7) {
+    width: 23%;
+    bottom: 130%;
+}
+.castle.backMainBdTop:nth-of-type(8) {
+    width: 11%;
+    bottom: 135%;
+    background-color: rgb(90, 104, 109);
+}
+
+
+
+/* * * * * BACK LEFT TOWER * * * * * */
+
+.castle.backLeftTower {
+    width: 11%;
+    height: 56%;
+    background-color: rgb(193, 204, 199);
+    left: 21%;
+}
+.castle.backLeftTowerMid {
+    width: 120%;
+    height: 9%;
+    background-color: rgb(211, 207, 161);
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.castle.backLeftTowerMidDeco {
+    width: 120%;
+    height: 40%;
+    background-color: rgb(221, 214, 173);
+    left: 50%;
+    bottom: initial;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.castle.backLeftTowerMid > .castle.towerTriRotateOuter {
+    bottom: 44%;
+}
+
+
+/* * * * * BACK RIGHT TOWER * * * * * */
+.castle.backRightTower {
+    width: 14%;
+    height: 54%;
+    background-color: rgb(193, 204, 199);
+    left: 67%;
+}
+.castle.backRightTowerMid {
+    width: 120%;
+    height: 5%;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(211, 207, 161);
+}
+.castle.backRightTowerMid:nth-of-type(2) {
+    width: 140%;
+    bottom: 105%;
+    background-image: linear-gradient(to top, rgb(221, 214, 173) 50%, rgb(90, 104, 109) 50%);
+}
+.castle.backRightTowerTop {
+    width: 80%;
+    height: 13%;
+    bottom: 110%;
+    background-color: rgb(193, 204, 199);
+    left: 10%;
+}
+.castle.backRightTowerWindow {
+    width: 40%;
+    height: 50%;
+    border-radius: 50% 50% 0 0;
+    background-color: rgb(90, 104, 109);
+    left: 50%;
+    bottom: initial;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.castle.backRightTowerTopMid {
+    width: 128%;
+    height: 40%;
+    bottom: 100%;
+    background-color: rgb(221, 214, 173);
+    left: -14%;
+}
+.castle.backRightTowerTopMid > .castle.towerTriRotateOuter {
+    bottom: 10%;
+}
+
+
+/* * * * * CASTLE (CENTER) MAIN BUILDING * * * * * */
+
 .castle.mainBd {
     width: 30%;
     height: 30%;
     left: 50%;
     transform: translate(-50%);
-    background-color: #9F4622;
+    background-color: rgb(226, 133, 59);
 }
 .castle.mainBdTop {
     width: 10%;
     bottom: 100%;
-    background-color: #9F4622;
-    border-top: 10px solid #4D4B4E;
+    background-color: rgb(226, 133, 59);
+    border-top: 10px solid rgb(90, 104, 109);
 }
 .castle.mainBdTop:nth-child(1) {height: 10%; left: 15%;}
 .castle.mainBdTop:nth-child(2) {height: 15%; left: 25%;}
@@ -91,7 +256,7 @@
     width: 20%;
     height: 25%;
     left: 40%;
-    background: #968662;
+    background-color: rgb(187, 179, 134);
 }
 .castle.mainGateDoor {
     width: 50%;
@@ -114,8 +279,8 @@
 .castle.sideBd  {
     width: 20%;
     height: 20%;
-    background-color: #9F4622;
-    border: 5px solid #968662;
+    background-color: rgb(226, 133, 59);
+    border: 5px solid rgb(187, 179, 134);
     border-bottom: none;
 }
 .castle.sideL {
@@ -127,7 +292,7 @@
 .castle.sideDeco {
     width: calc(100% / 7);
     height: 15%;
-    background: #968662;
+    background-color: rgb(187, 179, 134);
     bottom: 100%;
 }
 .castle.sideDeco:nth-child(2) {left: calc(200% / 7);}
@@ -139,7 +304,7 @@
     bottom: initial;
     right: 50%;
     border-top: 10px solid transparent;
-    border-right: 30px solid rgb(99, 99, 99);
+    border-right: 30px solid rgb(90, 104, 109);
     border-bottom: 35px solid transparent;
     top: 50%;
     transform: translate(0, -50%);
@@ -147,7 +312,7 @@
 .castle.sideShield.sideShieldR {
     transform: rotateY(180deg) translate(0, -50%);
     transform-origin: right;
-    border-right-color: rgb(85, 85, 85);
+    border-right-color: rgb(48, 58, 59);
 }
 
 
@@ -158,7 +323,7 @@
 .castle.tower {
     width: 10%;
     height: 30%;
-    background: linear-gradient(to right, #b6a377 50%, #968662 50%);
+    background: linear-gradient(to right, rgb(221, 214, 173) 50%, rgb(211, 207, 161) 50%);
 }
 .castle.towerL {
     left: 5%;
@@ -171,30 +336,18 @@
     width: 130%;
     height: 10%;
     left: -15%;
-    background: gray;
+    background-color: rgb(90, 104, 109);
 }
-.castle.towerTri {
+/* .castle.towerTri {
     width: 0;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 100px solid #4D4B4E;
     bottom: 100%;
-}
+} */
 
-.castle.towerTriRotateOuter {
-    width: calc(100% / 1.4142);
-    padding-top: calc(100% / 1.4142);
-    left: 15%;
-    bottom: 80%;
-    transform: rotate(-45deg);
-    transform-origin: 70% 60%;
-}
-.castle.towerTriRotateInner {
-    width: 100%; height: 100%;
-    background-color: #4D4B4E;
-    border-radius: 100% 0% 0% 100% / 0% 0% 100% 100%;
-}
+
 
 
 .castle.towerMidDeco {
@@ -213,4 +366,18 @@
     bottom: 75%;
 }
 
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * *  T R E E S  * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/* * * * * TREES - LEFT * * * * * */
+.trees {
+    position: absolute;
+    bottom: 0;
+}
 

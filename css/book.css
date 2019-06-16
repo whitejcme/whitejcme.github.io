@@ -8,8 +8,8 @@
     width: 95%;
     height: 90%;
     margin: 0 auto;
-    animation: bookRise 1s;
-    animation-fill-mode: forwards;
+    /* animation: bookRise 1s;
+    animation-fill-mode: forwards; */
     position: relative;
 }
 @media screen and (min-width: 1200px) {
