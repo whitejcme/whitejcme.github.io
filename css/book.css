@@ -43,10 +43,9 @@
 }
 .pageNum {
     position: absolute;
-    /* border: 1px solid; */
     bottom: 20px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 55px;
     font-size: 18px;
     font-weight: bold;
 }
