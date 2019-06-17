@@ -380,4 +380,100 @@
     position: absolute;
     bottom: 0;
 }
+.meadowL1 {
+    width: 80%;
+    height: 3%;
+    border-radius: 200% 330% 0 0;
+    background: lightgreen;
+}
+.meadowL2 {
+    width: 55%;
+    height: 6%;
+    border-radius: 300% 250% 0 0;
+    background: greenyellow;
+    left: 20%;
+}
 
+.treeL1Trunk {
+    width: 4%;
+    height: 25%;
+    background-color: rgb(100, 51, 19);
+    border-radius: 2px;
+    left: 20%;
+}
+.treeL1Leaf {
+    width: 10%;
+    height: 7%;
+    background-color: forestgreen;
+    border-radius: 100% 0% 100% 0% / 100% 0% 100% 0%;
+}
+.treeL1Leaf.leaf1 {
+    bottom: 24%;
+    left: 20%;
+    transform: rotate(-20deg);
+    transform-origin: bottom;
+}
+.treeL1Leaf.leaf2 {
+    bottom: 18%;
+    left: 23%;
+}
+.treeL1Leaf.leaf3 {
+    bottom: 19%;
+    left: 21%;
+    transform: rotateY(180deg);
+    transform-origin: left;
+}
+.treeL1Leaf.leaf4 {
+    bottom: 11.5%;
+    left: 23%;
+}
+.treeL1Leaf.leaf5 {
+    bottom: 13%;
+    left: 21%;
+    transform: rotateY(180deg);
+    transform-origin: left;
+}
+.treeL1Leaf.leaf6 {
+    bottom: 6%;
+    left: 23%;
+}
+.treeL1Leaf.leaf7 {
+    bottom: 7%;
+    left: 21%;
+    transform: rotateY(180deg);
+    transform-origin: left;
+}
+
+.treeL2Trunk {
+    width: 4%;
+    height: 20%;
+    background: rgb(65, 32, 14);
+    right: 30%;
+    border-radius: 2px;
+}
+.treeL2Leaf1Outer {
+    width: 25%;
+    padding-top: 25%;
+    right: 20%;
+    bottom: 19%;
+}
+.treeL2Leaf2Outer {
+    width: 15%;
+    padding-top: 15%;
+    right: 32%;
+    bottom: 15%;
+}
+.treeL2Leaf3Outer {
+    width: 20%;
+    padding-top: 20%;
+    right: 16%;
+    bottom: 14%;
+}
+.treeL2Leaf1, .treeL2Leaf2, .treeL2Leaf3 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom left, green 50%, rgb(43, 175, 43) 50%);
+    border-radius: 50%;
+}
