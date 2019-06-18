@@ -35,34 +35,37 @@
 	z-index: 1000;
 }
 
-.bb-custom-wrapper nav span {
+.nav-btn {
 	position: absolute;
 	width: 32px;
 	height: 32px;
 	bottom: 0;
-	background: #f1103a;
-	border-radius: 50%;
-	color: #fff;
-	line-height: 30px;
+	color: #f1103a;
+	border: 1px solid #f1103a;
+	line-height: 32px;
 	text-align: center;
 	speak: none;
-	font-weight: bold;
 	cursor: pointer;
 }
 
-.bb-custom-wrapper nav span:hover {
-	background: #000;
+.nav-btn:active {
+	color: #000;
 }
 
-.bb-custom-wrapper nav span:first-child {
-	left: 8px;
+.nav-btn i {
+	position: absolute;
+	left: 0; top: 0;
 }
 
-.bb-custom-wrapper nav span:last-child {
-	right: 8px;
+.nav-btn#bb-nav-prev {
+	left: 12px;
 }
 
-.no-js .bb-custom-wrapper nav span {
+.nav-btn#bb-nav-next {
+	right: 12px;
+}
+
+.no-js .nav-btn {
 	display: none;
 }
 

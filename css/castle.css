@@ -78,6 +78,14 @@
     border-radius: 100% 0% 0% 100% / 0% 0% 100% 100%;
 }
 
+.castle.windows {
+    width: 20%;
+    height: 3.5%;
+    background-color: rgb(164, 167, 163);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+}
+
 
 /* * * * * CENTER BACK TOWER (TALLEST) * * * * * */
 
@@ -179,6 +187,19 @@
     bottom: 44%;
 }
 
+.castle.windows.window1 {
+    bottom: 90%;
+    left: 20%;
+}
+.castle.windows.window2 {
+    bottom: 80%;
+    right: 20%;
+}
+.castle.windows.window3 {
+    bottom: 70%;
+    left: 25%;
+}
+
 
 /* * * * * BACK RIGHT TOWER * * * * * */
 .castle.backRightTower {
@@ -227,7 +248,16 @@
 .castle.backRightTowerTopMid > .castle.towerTriRotateOuter {
     bottom: 10%;
 }
-
+.castle.windows.window4 {
+    height: 4%;
+    bottom: 90%;
+    right: 20%;
+}
+.castle.windows.window5 {
+    height: 4%;
+    bottom: 80%;
+    left: 25%;
+}
 
 /* * * * * CASTLE (CENTER) MAIN BUILDING * * * * * */
 
@@ -386,27 +416,27 @@
     width: 80%;
     height: 3%;
     border-radius: 200% 330% 0 0;
-    background: lightgreen;
+    background: rgb(127, 177, 60);
 }
 .meadowL2 {
     width: 55%;
     height: 6%;
     border-radius: 300% 250% 0 0;
-    background: greenyellow;
+    background: rgb(154, 193, 92);
     left: 20%;
 }
 
 .treeL1Trunk {
     width: 4%;
     height: 25%;
-    background-color: rgb(100, 51, 19);
+    background-color: rgb(132, 86, 57);
     border-radius: 2px;
     left: 20%;
 }
 .treeL1Leaf {
     width: 10%;
     height: 7%;
-    background-color: forestgreen;
+    background-color: rgb(181, 218, 113);
     border-radius: 100% 0% 100% 0% / 100% 0% 100% 0%;
 }
 .treeL1Leaf.leaf1 {
@@ -414,8 +444,10 @@
     left: 20%;
     transform: rotate(-20deg);
     transform-origin: bottom;
+    background-color: rgb(139, 198, 97);
 }
 .treeL1Leaf.leaf2 {
+    background-color: rgb(139, 198, 97);
     bottom: 18%;
     left: 23%;
 }
@@ -430,6 +462,7 @@
     left: 23%;
 }
 .treeL1Leaf.leaf5 {
+    background-color: rgb(139, 198, 97);
     bottom: 13%;
     left: 21%;
     transform: rotateY(180deg);
@@ -438,18 +471,20 @@
 .treeL1Leaf.leaf6 {
     bottom: 6%;
     left: 23%;
+    background-color: rgb(84, 171, 83);
 }
 .treeL1Leaf.leaf7 {
     bottom: 7%;
     left: 21%;
     transform: rotateY(180deg);
     transform-origin: left;
+    background-color: rgb(84, 171, 83);
 }
 
 .treeL2Trunk {
     width: 4%;
     height: 20%;
-    background: rgb(65, 32, 14);
+    background: rgb(99, 59, 39);
     right: 37%;
     border-radius: 2px;
 }
@@ -474,7 +509,7 @@
 .treeL2Leaf1, .treeL2Leaf2, .treeL2Leaf3 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom left, green 50%, rgb(43, 175, 43) 50%);
+    background: linear-gradient(to bottom left, rgb(84, 171, 83) 50%, rgb(139, 198, 97) 50%);
     border-radius: 50%;
 }
 
@@ -487,28 +522,28 @@
     width: 80%;
     height: 2%;
     border-radius: 150% 200% 0 0;
-    background: lightgreen;
+    background: rgb(127, 177, 60);
     right: 2%;
 }
 .meadowR2 {
     width: 40%;
     height: 4%;
     border-radius: 300% 250% 0 0;
-    background: greenyellow;
+    background: rgb(154, 193, 92);
     right: 35%;
 }
 .meadowR3 {
     width: 30%;
     height: 5%;
     border-radius: 180% 300% 0 0;
-    background: rgb(147, 226, 29);
+    background: rgb(94, 133, 44);
     right: 7%;
 }
 
 .treeR1Trunk {
     width: 4%;
     height: 23%;
-    background: rgb(65, 32, 14);
+    background: rgb(132, 86, 57);
     left: 40%;
     border-radius: 2px;
 }
@@ -535,22 +570,28 @@
 .treeR1Leaf1, .treeR1Leaf2, .treeR1Leaf3 {
     width: 100%;
     height: 100%;
-    background: green;
+    background-color: rgb(181, 218, 113);
     border-radius: 100% 0% 0% 100% / 0% 0% 100% 100%;
+}
+.treeR1Leaf2 {
+    background-color: rgb(139, 198, 97);
+}
+.treeR1Leaf3 {
+    background-color: rgb(84, 171, 83);
 }
 
 
 .treeR2Trunk {
     width: 4%;
     height: 22%;
-    background: rgb(65, 32, 14);
+    background: rgb(99, 59, 39);
     right: 20%;
     border-radius: 4px;
 }
 .treeR2Branch1, .treeR2Branch2, .treeR2Branch3 {
     width: 50%;
     height: 17%;
-    background: rgb(65, 32, 14);
+    background: rgb(99, 59, 39);
     left: 0%;
     bottom: 85%;
     transform: rotate(-45deg);
@@ -569,7 +610,7 @@
 .treeR2Leaf1 {
     width: 24%;
     height: 14%;
-    background: green;
+    background: rgb(84, 171, 83);
     border-radius: 10px;
     right: 10%;
     bottom: 12%;
@@ -577,28 +618,14 @@
 .treeR2Leaf2 {
     top: 7px; left: 7px; right: 7px; bottom: 7px;
     border-radius: 7px;
-    background: rgb(0, 170, 0);
+    background: rgb(139, 198, 97);
 }
 .treeR2Leaf3 {
     top: 7px; left: 7px; right: 7px; bottom: 7px;
     border-radius: 7px;
-    background: rgb(0, 214, 0);
+    background: rgb(181, 218, 113);
 }
 
-
-/* .castle.towerTriRotateOuter {
-    width: calc(100% / 1.4142);
-    padding-top: calc(100% / 1.4142);
-    left: 15%;
-    bottom: 80%;
-    transform: rotate(-45deg);
-    transform-origin: 70% 60%;
-}
-.castle.towerTriRotateInner {
-    width: 100%; height: 100%;
-    background: linear-gradient(to right bottom, rgb(90, 104, 109), rgb(48, 58, 59));
-    border-radius: 100% 0% 0% 100% / 0% 0% 100% 100%;
-} */
 
 
 
