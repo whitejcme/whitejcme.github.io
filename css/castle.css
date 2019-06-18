@@ -450,25 +450,25 @@
     width: 4%;
     height: 20%;
     background: rgb(65, 32, 14);
-    right: 30%;
+    right: 37%;
     border-radius: 2px;
 }
 .treeL2Leaf1Outer {
     width: 25%;
     padding-top: 25%;
-    right: 20%;
+    right: 25%;
     bottom: 19%;
 }
 .treeL2Leaf2Outer {
     width: 15%;
     padding-top: 15%;
-    right: 32%;
+    right: 37%;
     bottom: 15%;
 }
 .treeL2Leaf3Outer {
     width: 20%;
     padding-top: 20%;
-    right: 16%;
+    right: 21%;
     bottom: 14%;
 }
 .treeL2Leaf1, .treeL2Leaf2, .treeL2Leaf3 {
