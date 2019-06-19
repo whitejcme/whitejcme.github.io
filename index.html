@@ -264,7 +264,7 @@
                     <div class="bb-item" id="item2">
                         <div class="content">
                             <div class="scroller">
-                                <h2>About Me</h2>
+                                <h2>About&nbsp;&nbsp;Me</h2>
                                 <p>Schloss Neuschwanstein in Bavaria is Germany's premiere fairy tale castle. 
                                     It is a dreamy blend of the best of Roman, Gothic, and Byzantine style architecture, 
                                     a concept known as Burgenromantik in German. A fairly modern castle from the 19th-century, 
@@ -311,7 +311,7 @@
                         </div>
                     </div>
                     <div class="bb-item" id="item5">
-                        <div class=" content">
+                        <div class="content">
                             <div class="scroller">
                                 <div class="pg4_contact">
                                     <h2>Contact</h2>
@@ -319,40 +319,40 @@
                                         <div id="bl-main" class="bl-main">
                                             <section>
                                                 <div class="bl-box">
-                                                    <h2 class="bl-icon bl-icon-about">Contact Me</h2>
+                                                    <h3 class="bl-icon bl-icon-about">Contact Me</h3>
                                                 </div>
                                                 <div class="bl-content">
-                                                    <h2>Contact Me</h2>
+                                                    <h3>Contact Me</h3>
                                                     <p>Jiwon Juliet Yoon</p>
                                                 </div>
                                                 <span class="bl-icon bl-icon-close"></span>
                                             </section>
                                             <section id="bl-work-section">
                                                 <div class="bl-box">
-                                                    <h2 class="bl-icon bl-icon-works">Email</h2>
+                                                    <h3 class="bl-icon bl-icon-works">Email</h3>
                                                 </div>
                                                 <div class="bl-content">
-                                                    <h2>Email</h2>
+                                                    <h3>Email</h3>
                                                     <p>jiwonjulietyoon@gmail.com</p>
                                                 </div>
                                                 <span class="bl-icon bl-icon-close"></span>
                                             </section>
                                             <section>
                                                 <div class="bl-box">
-                                                    <h2 class="bl-icon bl-icon-blog">GitHub</h2>
+                                                    <h3 class="bl-icon bl-icon-blog">GitHub</h3>
                                                 </div>
                                                 <div class="bl-content">
-                                                    <h2>GitHub</h2>
+                                                    <h3>GitHub</h3>
                                                     <p>github.com/jiwonjulietyoon</p>
                                                 </div>
                                                 <span class="bl-icon bl-icon-close"></span>
                                             </section>
                                             <section>
                                                 <div class="bl-box">
-                                                    <h2 class="bl-icon bl-icon-contact">LinkedIn</h2>
+                                                    <h3 class="bl-icon bl-icon-contact">LinkedIn</h3>
                                                 </div>
                                                 <div class="bl-content">
-                                                    <h2>LinkedIn</h2>
+                                                    <h3>LinkedIn</h3>
                                                     <p>linkedin.com/in/jiwon-yoon-155b89187</p>
                                                 </div>
                                                 <span class="bl-icon bl-icon-close"></span>
@@ -360,7 +360,7 @@
 
                                         </div>
                                     </div>
-                                </div>   
+                                </div> <!-- / .pg4_contact -->
                             </div>
                         </div>
                         <div class="pageNum">
@@ -415,6 +415,33 @@
         $(function() {
             Page.init();
             Boxlayout.init();
+        });
+
+        $(document).ready(function(){
+            $('#bb-nav-prev').hover(
+                function(){
+                    $(".pageNumL").css({
+                        'border-bottom': '3px solid rgb(48, 58, 59)',
+                    });
+                },
+                function(){
+                    $(".pageNumL").css({
+                        'border-bottom': '3px solid transparent',
+                    });
+                }
+            );
+            $('#bb-nav-next').hover(
+                function(){
+                    $(".pageNumR").css({
+                        'border-bottom': '3px solid rgb(48, 58, 59)',
+                    });
+                },
+                function(){
+                    $(".pageNumR").css({
+                        'border-bottom': '3px solid transparent',
+                    });
+                }
+            );
         });
     </script>
 

@@ -34,31 +34,22 @@
 }
 .pageNum {
     position: absolute;
-    bottom: 20px;
+    bottom: 16px;
     width: 100%;
     padding: 0 55px;
     font-size: 18px;
     font-weight: bold;
     font-family: 'Copse', serif;
+    
 }
 .pageNumL {
     float: left;
+    border-bottom: 3px solid transparent;
+    transition: all 0.5s;
 }
 .pageNumR {
     float: right;
+    border-bottom: 3px solid transparent;
+    transition: all 0.5s;
 }
-
-.pg1_castle {
-    width: 90%;
-    margin: 0 auto;
-}
-
-
-.contactCard {
-    width: 80%;
-    height: 300px;
-    margin: auto;
-    position: relative;
-}
-
 

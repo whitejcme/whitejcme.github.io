@@ -133,19 +133,16 @@
 	font-family: 'Copse', serif;
 }
 
-@media screen and (max-width: 800px){
-	.no-js .menu-panel {
-		display: none;
-	}
-
+@media screen and (max-width: 767px){
 	.no-js .container {
 		padding: 0;
 	}
-}
-
-@media screen and (max-width: 768px){
-	.menu-panel,
 	.content {
 		font-size: 80%;
+	}
+}
+@media screen and (max-width: 575px){
+	.content {
+		font-size: 60%;
 	}
 }
