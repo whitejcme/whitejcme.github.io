@@ -108,20 +108,34 @@
 	margin-bottom: 10px;
 }
 
-.bl-icon-about:before {
-	content: "\e000";
+.bl-icon-about::before {
+	content: "";
+	width: 30px;
+	height: 30px;
 }
 
-.bl-icon-works:before {
-	content: "\e001";
+.bl-icon-works::before {
+	content: "";
+	width: 35px;
+	height: 35px;
+	margin: 0 auto 10px;
+	background: url('../img/email.png') no-repeat center / contain;
 }
 
-.bl-icon-blog:before {
-	content: "\e002";
+.bl-icon-blog::before {
+	content: "";
+	width: 30px;
+	height: 30px;
+	margin: 0 auto 10px;
+	background: url('../img/github.png') no-repeat center / contain;
 }
 
-.bl-icon-contact:before {
-	content: "\e003";
+.bl-icon-contact::before {
+	content: "";
+	width: 30px;
+	height: 30px;
+	margin: 0 auto 10px;
+	background: url('../img/linkedin.png') no-repeat center / contain;
 }
 
 .bl-main > section .bl-icon-close {
