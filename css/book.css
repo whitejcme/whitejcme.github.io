@@ -34,7 +34,7 @@
 }
 .pageNum {
     position: absolute;
-    bottom: 16px;
+    bottom: 17px;
     width: 100%;
     padding: 0 55px;
     font-size: 18px;
@@ -44,12 +44,12 @@
 }
 .pageNumL {
     float: left;
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
     transition: all 0.5s;
 }
 .pageNumR {
     float: right;
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
     transition: all 0.5s;
 }
 
