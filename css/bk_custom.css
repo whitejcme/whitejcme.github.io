@@ -109,26 +109,28 @@
 }
 
 .content h2 {
-	font-weight: 300;
-	font-size: 4em;
-	padding: 0 0 10px;
+	/* font-weight: 300; */
+	font-size: 3em;
+	/* padding: 0 0 10px; */
 	color: #333;
-	margin: 0 1% 40px;
+	margin: 0 1% 20px;
 	text-align: left;
-	box-shadow: 0 10px 0 rgba(0,0,0,0.02);
-	text-shadow: 0 0 2px #fff;
+	/* box-shadow: 0 10px 0 rgba(0,0,0,0.02);
+	text-shadow: 0 0 2px #fff; */
+	font-family: 'Homemade Apple', cursive;
 }
 
-.no-js .content h2 {
+/* .no-js .content h2 {
 	padding: 40px 1% 20px;
-}
+} */
 
 .content p {
 	font-size: 1.2em;
 	line-height: 1.6;
-	font-weight: 300;
+	/* font-weight: 300; */
 	padding: 5px 8%;
 	text-align: justify;
+	font-family: 'Copse', serif;
 }
 
 @media screen and (max-width: 800px){
@@ -141,9 +143,9 @@
 	}
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 768px){
 	.menu-panel,
 	.content {
-		font-size: 75%;
+		font-size: 80%;
 	}
 }

@@ -58,6 +58,25 @@
     width: 100%; height: 100%;
     position: relative;
 }
+.welcomeTitle {
+    position: absolute;
+    width: 100%;
+    top: -1%;
+    text-align: center;
+    font-family: 'Homemade Apple', cursive;
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+@media screen and (min-width: 576px) {
+    .welcomeTitle {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .welcomeTitle {
+        font-size: 1.8rem;
+    }
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * *  C A S T L E  * * * * * * * * * * * */
@@ -475,7 +494,7 @@
 }
 .banner4 {
     bottom: 84%;
-    left: 74.5%;
+    left: 74.4%;
 }
 .banner5 {
     bottom: 49%;
@@ -498,7 +517,7 @@
 .meadowL1 {
     width: 80%;
     height: 3%;
-    border-radius: 200% 330% 0 0;
+    border-radius: 200% 330% 0 30px;
     background: rgb(127, 177, 60);
 }
 .meadowL2 {
@@ -714,6 +733,7 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * *  T O P  L A Y E R  * * * * * * * * * * * */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 
 
 
