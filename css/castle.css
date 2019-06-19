@@ -48,6 +48,8 @@
 .frameM {
     width: 100%;
     border-bottom: 15px solid rgb(59, 90, 78);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 @media screen and (min-width: 576px) {
     .frameL, .frameR {
@@ -56,6 +58,7 @@
     }
     .frameM {
         width: 50%;
+        border-radius: 0;
     }
 }
 
@@ -477,7 +480,7 @@
     position: absolute;
     width: 85%;
     color: rgb(48, 58, 59);
-    font-family: 'Rye', cursive;
+    font-family: 'Berkshire Swash', cursive;
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
