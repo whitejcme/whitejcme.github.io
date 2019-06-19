@@ -29,15 +29,6 @@
     padding: 15px;
 }
 
-
-.sectionTitle {
-    width: 100%;
-    /* border: 1px solid; */
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-}
-
 .bb-item {
     position: relative;
 }
