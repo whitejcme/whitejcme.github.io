@@ -54,6 +54,10 @@
     }
 }
 
+.frameTopLayer {
+    width: 100%; height: 100%;
+    position: relative;
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * *  C A S T L E  * * * * * * * * * * * */
@@ -378,8 +382,6 @@
 } */
 
 
-
-
 .castle.towerMidDeco {
     bottom: 50%;
     width: calc(100% / 7);
@@ -398,6 +400,87 @@
 
 
 
+/* * * * * CASTLE FLAGS * * * * * */
+
+.flagpole {
+    position: absolute;
+    width: 0.7%;
+    height: 20%;
+    background-color: rgb(48, 58, 59);
+    border-radius: 2px;
+    bottom: 0;
+}
+.pole1 {bottom: 30%; left: 9.5%;}
+.pole2 {bottom: 56%; left: 26.2%;}
+.pole3 {bottom: 68%; left: 47.3%;}
+.pole4 {bottom: 65%; left: 73.7%;}
+.pole5 {bottom: 30%; right: 9.5%;}
+
+.flagBannerOuter {
+    position: absolute;
+    width: 7%;
+    padding-top: 7%;
+}
+.flagBanner {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: rgb(226, 133, 59);
+    border: 4px solid rgb(226, 100, 0);
+    border-left: none;
+}
+.banner4 > .flagBanner, .banner5 > .flagBanner {
+    border: 4px solid rgb(226, 100, 0);
+    border-right: none;
+}
+.flagBannerDeco {
+    position: absolute;
+    left: -18%;
+    width: 100%;
+    /* height: calc(100% * 1.02); */
+    height: 100%;
+    background: rgb(226, 133, 59);
+    transform: skew(15deg);
+    border-top: 4px solid rgb(226, 100, 0);
+    border-left: 4px solid rgb(226, 100, 0);
+}
+.banner4 > .flagBannerDeco, .banner5 > .flagBannerDeco {
+    transform: skew(-15deg);
+    left: 18%;
+    border-left: none;
+    border-right: 4px solid rgb(226, 100, 0);
+}
+.flagLetter {
+    position: absolute;
+    width: 85%;
+    color: rgb(48, 58, 59);
+    font-family: 'Rye', cursive;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.banner4 .flagLetter, .banner5 .flagLetter {
+    left: 15%;
+}
+.banner1 {
+    bottom: 49%;
+    left: 2.5%;
+}
+.banner2 {
+    bottom: 75%;
+    left: 19.2%;
+}
+.banner3 {
+    bottom: 87%;
+    left: 40.3%;
+}
+.banner4 {
+    bottom: 84%;
+    left: 74.5%;
+}
+.banner5 {
+    bottom: 49%;
+    right: 2.5%;
+}
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -558,13 +641,13 @@
 .treeR1Leaf2Outer {
     width: 18%;
     padding-top: 18%;
-    bottom: 16%;
+    bottom: 17%;
     left: 33%;
 }
 .treeR1Leaf3Outer {
     width: 21%;
     padding-top: 21%;
-    bottom:11%;
+    bottom: 12%;
     left: 32%;
 }
 .treeR1Leaf1, .treeR1Leaf2, .treeR1Leaf3 {
@@ -626,6 +709,11 @@
     background: rgb(181, 218, 113);
 }
 
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * *  T O P  L A Y E R  * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 
 
