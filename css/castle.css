@@ -522,6 +522,50 @@
 
 /* * * * * TREES - LEFT * * * * * */
 
+.cloudBase {
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    background: linear-gradient(to bottom, white, aliceblue);
+    position: absolute;
+    top: 12%;
+    left: 20%;
+}
+.cloudTopL {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    bottom: 60%;
+    left: 15%;
+}
+.cloudTopR {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    bottom: 45%;
+    right: 15%;
+}
+@media screen and (max-width: 991px) {
+    .cloudBase {
+        width: 75px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    .cloudTopL {
+        width: 22px;
+        height: 22px;
+    }
+    .cloudTopR {
+        width: 33px;
+        height: 33px;
+    }
+}
+
+
 .meadowL1 {
     width: 80%;
     height: 3%;
@@ -627,6 +671,77 @@
 
 
 /* * * * * TREES - RIGHT * * * * * */
+
+.sun {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7%;
+    right: 20%;
+    background: yellow;
+}
+.sunraysBg {
+    width: 7px; height: 7px;
+}
+.sunraysSm {
+    width: 5px; height: 5px;
+}
+.sunrays {
+    border-radius: 50%;
+    position: absolute;
+    background: yellow;
+}
+.sunrays:nth-child(1) {
+    bottom: 120%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.sunrays:nth-child(2) {
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.sunrays:nth-child(3) {
+    left: 120%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.sunrays:nth-child(4) {
+    right: 120%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.sunrays:nth-child(5) {
+    top: -10%;
+    left: -10%;
+}
+.sunrays:nth-child(6) {
+    top: -10%;
+    right: -10%;
+}
+.sunrays:nth-child(7) {
+    bottom: -10%;
+    left: -10%;
+}
+.sunrays:nth-child(8) {
+    bottom: -10%;
+    right: -10%;
+}
+@media screen and (max-width: 991px) {
+    .sun {
+        width: 30px;
+        height: 30px;
+    }
+    .sunraysBg {
+        width: 6px; height: 6px;
+    }
+    .sunraysSm {
+        width: 4px; height: 4px;
+    }
+}
+
+
 
 .meadowR1 {
     width: 80%;
