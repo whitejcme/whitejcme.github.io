@@ -28,6 +28,7 @@
     }
 }
 
+
 .pictureFrame {
     position: absolute;
     top: 0;
@@ -35,8 +36,37 @@
     right: 0;
     bottom: 0;
     border-radius: 5px;
-    background: linear-gradient(to right, rgb(199, 230, 255), rgb(220, 238, 253), rgb(199, 230, 255)) ;
+    /* background: linear-gradient(to right, rgb(199, 230, 255), rgb(220, 238, 253), rgb(199, 230, 255)); */
+    /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+    /* background: radial-gradient(ellipse at bottom, rgb(240, 248, 255) 30%, rgb(169, 218, 255) 100%); */
+    /* background: radial-gradient(ellipse at bottom, #FFFFFF 20%, #9CECFB 100%); */
+    /* background: radial-gradient(ellipse at bottom, #FFFDE4 0%, #005AA7 100%); */
+    /* background: radial-gradient(ellipse at bottom, red 10%, blue 100%); */
 }
+
+@keyframes skyColor {
+    0% {opacity: 1}
+    100% {opacity: 0}
+}
+
+.bgSky {
+    position: absolute;
+    width: 100%; height: 100%;
+}
+.bgSkyDay {
+    background: radial-gradient(ellipse at bottom, #FFFFFF 20%, #9CECFB 100%);
+    opacity: 1;
+    animation: skyColor 20s infinite alternate;
+    animation-timing-function: linear;
+}
+.bgSkyNight {
+    background: radial-gradient(ellipse at bottom, #FFFDE4 0%, #005AA7 100%);
+    opacity: 0;
+    animation: skyColor 20s infinite alternate-reverse;
+    animation-timing-function: linear;
+}
+
+
 .frameSec {
     float: left;
     height: 100%;
@@ -521,21 +551,126 @@
 }
 
 /* * * * * TREES - LEFT * * * * * */
+@keyframes star1Opacity {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    100% {opacity: 1}
+}
+@keyframes star2Opacity {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    90% {opacity: 1}
+    100% {opacity: 1}
+}
+@keyframes star3Opacity {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    80% {opacity: 1}
+    100% {opacity: 1}
+}
+@keyframes star4Opacity {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    70% {opacity: 1}
+    100% {opacity: 1}
+}
+@keyframes star5Opacity {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    60% {opacity: 1}
+    100% {opacity: 1}
+}
 
+.star {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .9em;
+    margin-right: .9em;
+    margin-bottom: 1.2em;
+    border-right: .3em solid transparent;
+    border-bottom: .7em solid #EEEEEE;
+    border-left: .3em solid transparent;
+    opacity: 0;
+    animation: star1Opacity 20s infinite alternate;
+    animation-timing-function: linear;
+}
+.star:before,
+.star:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: .6em;
+    left: -1em;
+    border-right: 1em solid transparent;
+    border-bottom: .7em solid #EEEEEE;
+    border-left: 1em solid transparent;
+    -webkit-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+}
+.star:after {
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+}
+.star1 {
+    font-size: 8px;
+    top: 10%;
+    left: 10%;
+}
+.star2 {
+    font-size: 5px;
+    top: 17%;
+    left: 20%;
+    animation-name: star3Opacity
+}
+.star3 {
+    font-size: 6px;
+    top: 10%;
+    left: 65%;
+    animation-name: star5Opacity
+}
+.star4 {
+    font-size: 7px;
+    top: 18%;
+    left: 70%;
+    animation-name: star2Opacity
+}
+.star5 {
+    font-size: 5px;
+    top: 13%;
+    left: 42%;
+    animation-name: star4Opacity
+}
+
+
+
+
+
+@keyframes cloudOpacity {
+    0% {opacity: 1}
+    80% {opacity: 0}
+    100% {opacity: 0}
+}
 .cloudBase {
     width: 100px;
     height: 40px;
     border-radius: 40px;
-    background: linear-gradient(to bottom, white, aliceblue);
+    background: radial-gradient(ellipse at top, white 50%, rgb(220, 236, 250));
     position: absolute;
     top: 12%;
     left: 20%;
+    opacity: 1;
+    animation: cloudOpacity 20s infinite alternate;
+    animation-timing-function: linear;
 }
 .cloudTopL {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: white;
+    background: radial-gradient(ellipse at bottom, white 70%, rgb(220, 236, 250));
     position: absolute;
     bottom: 60%;
     left: 15%;
@@ -544,7 +679,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: white;
+    background: radial-gradient(ellipse at bottom, white 70%, rgb(220, 236, 250));
     position: absolute;
     bottom: 45%;
     right: 15%;
@@ -672,6 +807,38 @@
 
 /* * * * * TREES - RIGHT * * * * * */
 
+@keyframes moonOpacity {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.moon {
+    position: absolute;
+    top: 3%;
+    right: 22%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 12px 12px 0 0 #EEEEEE;
+    opacity: 0;
+    animation: moonOpacity 20s infinite alternate;
+    animation-timing-function: linear;
+}
+@media screen and (max-width: 991px) {
+    .moon {
+        width: 45px;
+        height: 45px;
+        box-shadow: 9px 9px 0 0 #EEEEEE;
+    }
+}
+
+
+@keyframes sunOpacity {
+    0% {opacity: 1}
+    50% {opacity: 0}
+    100% {opacity: 0}
+}
 .sun {
     width: 40px;
     height: 40px;
@@ -679,7 +846,10 @@
     position: absolute;
     top: 7%;
     right: 20%;
-    background: yellow;
+    background: radial-gradient(circle, #fffc00 0%, #F2C94C 100%);
+    opacity: 1;
+    animation: sunOpacity 20s infinite alternate;
+    animation-timing-function: linear;
 }
 .sunraysBg {
     width: 7px; height: 7px;
@@ -690,7 +860,7 @@
 .sunrays {
     border-radius: 50%;
     position: absolute;
-    background: yellow;
+    background: #F2C94C;
 }
 .sunrays:nth-child(1) {
     bottom: 120%;

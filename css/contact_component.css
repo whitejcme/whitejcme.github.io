@@ -7,6 +7,7 @@
 @media screen and (min-width: 992px) {
 	.contactCard {
 		width: 65%;
+		height: 350px;
 	}
 }
 
@@ -34,12 +35,16 @@
 	top: 0;
 	left: 50%;
 	background: #FA987D;
+	/* background: #F4A261; */
 }
 
 .bl-main > section:nth-child(3) {
 	top: 50%;
 	left: 0;
 	background: #72CCA7;
+	
+	/* background: #E9C46A; */
+	
 }
 
 .bl-main > section:nth-child(4) {
@@ -181,48 +186,6 @@ div.bl-panel-items > div > div {
 	font-family: 'Copse', serif;
 }
 
-/* .bl-content article {
-	padding: 20px 40px 20px 0px;
-}
-
-.bl-content article h3 {
-	font-weight: 700;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	margin: 0 0 10px 0;
-	padding-top: 20px;
-	font-size: 1.4em;
-	font-family: 'Copse', serif;
-}
-
-.bl-content article a {
-	color: rgba(0,0,0,0.2);
-} */
-
-/* .bl-content > ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-} 
-
-.bl-content > ul li {
-	display: inline-block;
-	width: 20%;
-	margin: 1%;
-}
-
-.bl-content > ul li a {
-	display: block;
-	padding: 0;
-	border: 8px solid rgba(0,0,0,0.1);
-}
-
-.bl-content > ul li a img {
-	display: block;
-	max-width: 100%;
-} */
-
-
 
 /* Transition classes and properties */
 /* Separated for a better overview and control */
@@ -249,6 +212,7 @@ div.bl-panel-items > div > div {
 }
 .bl-main > section:nth-child(2).bl-expand {
 	background: #F98262;
+	/* background: rgb(249, 146, 63); */
 }
 .bl-main > section:nth-child(3).bl-expand {
 	background: #4BBE8E;

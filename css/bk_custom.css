@@ -40,7 +40,8 @@
 	width: 32px;
 	height: 32px;
 	bottom: 0;
-	background-color: #f1103a;
+	/* background-color: #f1103a; */
+	background-color: rgb(238, 68, 62);
 	border-radius: 50%;
 	/* border: 1px solid #f1103a; */
 	/* line-height: 32px; */
