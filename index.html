@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/book.css">
     <link rel="stylesheet" type="text/css" href="css/castle.css">
+    <link rel="stylesheet" type="text/css" href="css/aboutme.css">
     <link rel="stylesheet" type="text/css" href="css/projects.css">
     
     <title>Jiwon Yoon</title>
@@ -269,8 +270,6 @@
                                                 <div class="trees meadowR3"></div>
                                                 <div class="trees meadowR1"></div>
                                             </div> <!-- / .frameR -->
-                                            
-                                            
 
                                         </div> <!-- / .pictureFrame -->
                                     </section> <!-- / .pictureContainer -->
@@ -287,19 +286,40 @@
                         <div class="content">
                             <div class="scroller">
                                 <h2>About&nbsp;&nbsp;Me</h2>
-                                <p>Schloss Neuschwanstein in Bavaria is Germany's premiere fairy tale castle. 
-                                    It is a dreamy blend of the best of Roman, Gothic, and Byzantine style architecture, 
-                                    a concept known as Burgenromantik in German. A fairly modern castle from the 19th-century, 
-                                    it pays homage to the German composer Richard Wagner and was designed by the (possibly mad) 
-                                    King Ludwig II of Bavaria at an astronomical cost of 14 million Deutschmark—roughly $8 million.</p>
-                            </div>
+                                <div class="aboutmeContent">
+                                    <div class="aboutmeLeftPage">
+                                        <div class="wordBox" 
+                                            v-for="text in allText" 
+                                            :class="{wordBoxSelected: text.current}"
+                                            @click="setCurrent(text)">{{text.preview}}</div>
+                                    </div> <!-- .aboutmeLeftPage -->
+                                    <div class="aboutmeRightPage">
+                                        <h3 class="aboutmeWord"><span v-for="letter in currWord">{{letter}}</span></h3>
+                                        <p class="aboutmeBlurb">{{currBlurb}}</p>
+                                    </div> <!-- .aboutmeRightPage -->
+                                </div> <!-- .aboutmeContent -->
+                            </div> <!--About Me Scroller-->
                         </div>
                         <div class="pageNum">
                             <span class="pageNumL">Home</span>
-                            <span class="pageNumR">Projects</span>
+                            <span class="pageNumR">Skills</span>
                         </div>
                     </div>
                     <div class="bb-item" id="item3">
+                        <div class="content">
+                            <div class="scroller">
+                                <h2>Skills</h2>
+                                <p>From that excellent work, "Scenes in the Practice of a New York Surgeon,"
+                                    by Dr. E. H. Dixon, I copy, with some abbreviation, the following, which
+                                    the author terms "Leaves from the Log-book of an Unfledged Æsculapian:"--</p>
+                            </div>
+                        </div>
+                        <div class="pageNum">
+                            <span class="pageNumL">About Me</span>
+                            <span class="pageNumR">Projects</span>
+                        </div>
+                    </div>
+                    <div class="bb-item" id="item4">
                         <div class="content">
                             <div class="scroller">
                                 <div class="pg3_projects">
@@ -324,25 +344,10 @@
                                         </div> -->
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="pageNum">
-                            <span class="pageNumL">About Me</span>
-                            <span class="pageNumR">Reflections</span>
-                        </div>
-                    </div>
-                    <div class="bb-item" id="item4">
-                        <div class="content">
-                            <div class="scroller">
-                                <h2>Reflections</h2>
-                                <p>From that excellent work, "Scenes in the Practice of a New York Surgeon,"
-                                    by Dr. E. H. Dixon, I copy, with some abbreviation, the following, which
-                                    the author terms "Leaves from the Log-book of an Unfledged Æsculapian:"--</p>
-                            </div>
-                        </div>
-                        <div class="pageNum">
-                            <span class="pageNumL">Projects</span>
+                            <span class="pageNumL">Skills</span>
                             <span class="pageNumR">Contact</span>
                         </div>
                     </div>
@@ -434,9 +439,9 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script> -->
     
-
+    <!-- VUE.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
-
     <!-- Book Page Flip JS -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
     <script src="js/bk_jquery.mousewheel.js"></script>
@@ -445,11 +450,10 @@
     <script src="js/bk_jquery.bookblock.js"></script>
     <script src="js/bk_page.js"></script>
 
-    
-
     <!-- Custom JavaScript -->
     <script src="js/castle.js"></script>
-
+    <script src="js/aboutme.js"></script>
+    
     <!-- Contact Me JS -->
     <script src="js/contact_boxlayout.js"></script>
 

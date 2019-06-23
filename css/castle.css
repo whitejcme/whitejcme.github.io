@@ -630,24 +630,35 @@
     0% {opacity: 0}
     65% {opacity: 0}
     90% {opacity: 1}
+    92% {opacity: 0.3}
+    94% {opacity: 1}
     100% {opacity: 1}
 }
 @keyframes star3Opacity {
     0% {opacity: 0}
     70% {opacity: 0}
     80% {opacity: 1}
+    82% {opacity: 1}
+    84% {opacity: 0.4}
+    86% {opacity: 1}
     100% {opacity: 1}
 }
 @keyframes star4Opacity {
     0% {opacity: 0}
     60% {opacity: 0}
     85% {opacity: 1}
+    90% {opacity: 1}
+    93% {opacity: 0.2}
+    96% {opacity: 1}
     100% {opacity: 1}
 }
 @keyframes star5Opacity {
     0% {opacity: 0}
     65% {opacity: 0}
     70% {opacity: 1}
+    75% {opacity: 1}
+    80% {opacity: 0.3}
+    90% {opacity: 1}
     100% {opacity: 1}
 }
 

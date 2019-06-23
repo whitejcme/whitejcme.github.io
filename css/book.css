@@ -1,12 +1,12 @@
 
 @keyframes bookRise {
     0% {top: 10%;}
-    95% {top: 4%;}
-    100% {top: 5%;}
+    95% {top: 2.5%;}
+    100% {top: 3%;}
 }
 #wrap {
     width: 95%;
-    height: 90%;
+    height: 94%;
     margin: 0 auto;
     /* animation: bookRise 1s;
     animation-fill-mode: forwards; */
