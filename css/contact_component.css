@@ -28,29 +28,31 @@
 .bl-main > section:first-child {
 	top: 0;
 	left: 0;
-	background: #F06060;
+	/* background: #F06060; */
+	background: #EAAFC8;
 }
 
 .bl-main > section:nth-child(2) {
 	top: 0;
 	left: 50%;
-	background: #FA987D;
+	/* background: #FA987D; */
 	/* background: #F4A261; */
+	background: #FFC371;
 }
 
 .bl-main > section:nth-child(3) {
 	top: 50%;
 	left: 0;
-	background: #72CCA7;
-	
+	/* background: #72CCA7; */
 	/* background: #E9C46A; */
-	
+	background: #72E7F9;
 }
 
 .bl-main > section:nth-child(4) {
 	top: 50%;
 	left: 50%;
-	background: #10A296;
+	/* background: #10A296; */
+	background: #93F9B9;
 }
 
 .bl-box {
@@ -208,17 +210,20 @@ div.bl-panel-items > div > div {
 }
 
 .bl-main > section:first-child.bl-expand {
-	background: #EE4444;
+	/* background: #EE4444; */
+	background: rgb(198, 148, 191);
 }
 .bl-main > section:nth-child(2).bl-expand {
-	background: #F98262;
-	/* background: rgb(249, 146, 63); */
+	/* background: #F98262; */
+	background: rgb(255, 152, 112);
 }
 .bl-main > section:nth-child(3).bl-expand {
-	background: #4BBE8E;
+	/* background: #4BBE8E; */
+	background: #0ED2F7;
 }
 .bl-main > section:nth-child(4).bl-expand {
-	background: #0D8278;
+	/* background: #0D8278; */
+	background: rgb(109, 215, 158);
 }
 
 .bl-main.bl-expand-item > section:not(.bl-expand),
