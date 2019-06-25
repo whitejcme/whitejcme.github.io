@@ -1,0 +1,91 @@
+.skillsContent {
+    width: 100%;
+    overflow-y: auto;
+}
+
+.skillsRanked {
+    width: 90%;
+    height: 250px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.skillCenterOuter {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 150px;
+    height: auto;
+}
+
+.skillCenterBannerMain {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: beige;
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.skillsOthers {
+    width: 80%;
+    height: 140px;
+    margin: 20px auto;
+}
+@media screen and (max-width: 575px) {
+    .skillsOthers {
+        width: 90%;
+    }
+}
+.skillsOthers > div {
+    float: left;
+}
+
+.skillScrollMain {
+    width: calc(100% - 60px);
+    height: 100px;
+    background-color: beige;
+    padding: 10px;
+    position: relative;
+    top: 10px;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.skillScrollRoll {
+    width: 30px;
+    height: 120px;
+    background-color: rgb(212, 212, 186);
+    position: relative;
+    border-radius: 2px;
+}
+.skillScrollRoll > .rollTop, .skillScrollRoll > .rollBot {
+    position: absolute;
+    width: 20px;
+    height: 7px;
+    background-color: rgb(170, 170, 149);
+    left: 5px;
+}
+.skillScrollRoll > .rollTop, .skillScrollRoll > .rollTop:after {
+    bottom: 100%;
+    border-radius: 2px 2px 0 0;
+}
+.skillScrollRoll > .rollBot, .skillScrollRoll > .rollBot:after{
+    top: 100%;
+    border-radius: 0 0 2px 2px;
+}
+.skillScrollRoll > .rollTop:after, .skillScrollRoll > .rollBot:after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background-color: rgb(146, 146, 128);
+    left: 50%;
+    transform: translate(-50%);
+}
+

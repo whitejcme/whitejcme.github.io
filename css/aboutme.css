@@ -42,17 +42,12 @@
     text-align: center;
     background-color: rgb(255, 209, 123);
     cursor: pointer;
+    position: relative;
 }
 @media screen and (max-width: 991px) {
     .wordBox {
-        width: 80px;
-        height: 80px;
-    }
-}
-@media screen and (max-width: 575px) {
-    .wordBox {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
 }
 .wordBoxSelected {
