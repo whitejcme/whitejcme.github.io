@@ -7,6 +7,7 @@
     padding-top: 120%;
     position: relative;
     margin-top: 10px;
+    /* overflow: hidden; */
 }
 @media screen and (min-width: 576px) {
     .pictureContainer {padding-top: 100%;}
@@ -342,28 +343,31 @@
     width: 100%; height: 100%;
     background: rgb(226, 133, 59);
     border: 4px solid rgb(226, 100, 0);
-    border-left: none;
+    /* border-left: none; */
 }
 .banner4 > .flagBanner, .banner5 > .flagBanner {
     border: 4px solid rgb(226, 100, 0);
-    border-right: none;
+    /* border-right: none; */
 }
 .flagBannerDeco {
     position: absolute;
-    left: -18%;
+    left: -25%;
     width: 100%;
     /* height: calc(100% * 1.02); */
     height: 100%;
     background: rgb(226, 133, 59);
     transform: skew(15deg);
-    border-top: 4px solid rgb(226, 100, 0);
-    border-left: 4px solid rgb(226, 100, 0);
+    border: 4px solid rgb(226, 100, 0);
+    border-right: none;
+    /* border-top: 4px solid rgb(226, 100, 0);
+    border-left: 4px solid rgb(226, 100, 0); */
 }
 .banner4 > .flagBannerDeco, .banner5 > .flagBannerDeco {
     transform: skew(-15deg);
-    left: 18%;
+    left: 25%;
+    border: 4px solid rgb(226, 100, 0);
     border-left: none;
-    border-right: 4px solid rgb(226, 100, 0);
+    /* border-right: 4px solid rgb(226, 100, 0); */
 }
 .flagLetter {
     position: absolute;
@@ -371,10 +375,10 @@
     color: rgb(48, 58, 59);
     font-family: 'Berkshire Swash', cursive;
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 45%; left: 15%;
+    transform: translateY(-50%) skew(-15deg);
 }
-.banner4 .flagLetter, .banner5 .flagLetter {left: 15%;}
+.banner4 .flagLetter, .banner5 .flagLetter {left: 5%; transform: translateY(-50%) skew(15deg);}
 .banner1 {bottom: 49%; left: 2.5%;}
 .banner2 {bottom: 75%; left: 19.2%;}
 .banner3 {bottom: 87%; left: 40.3%;}
@@ -617,6 +621,59 @@
         display: none;
     }
 }
+
+
+.rainbowBox {
+    position: absolute;
+    width: 50%;
+    padding-top: 50%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    /* border: 1px solid; */
+}
+@media screen and (max-width: 575px) {
+    .rainbowBox {width: 100%; padding-top: 100%;}
+}
+.rainbowContainer {
+    position: absolute;
+    top: 30%; left: 30%; right: 30%; bottom: 30%;
+    transform: translateY(120%) rotate(45deg);
+    /* border: 1px solid hotpink; */
+}
+
+@keyframes rainbowspin {
+    0% {transform: rotate(0deg)}
+    5% {transform: rotate(0deg)}
+    15% {transform: rotate(360deg)}
+    100% {transform: rotate(360deg)}
+}
+.rainbowRing {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: radial-gradient(ellipse at -50% -50%, transparent 43%, #FDD0D0 45%, #FDFBD6 47%, #D5FBC9 49%, #DBFAFF 51%, #EBD3FD 53%, transparent 55%);
+    transform-origin: -50% -50%;
+    animation: rainbowspin 30s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+.rainbowRing:nth-of-type(1) {animation-delay: -0.45s}
+.rainbowRing:nth-of-type(2) {animation-delay: -0.4s}
+.rainbowRing:nth-of-type(3) {animation-delay: -0.35s}
+.rainbowRing:nth-of-type(4) {animation-delay: -0.3s}
+.rainbowRing:nth-of-type(5) {animation-delay: -0.25s}
+.rainbowRing:nth-of-type(6) {animation-delay: -0.2s}
+.rainbowRing:nth-of-type(7) {animation-delay: -0.15s}
+.rainbowRing:nth-of-type(8) {animation-delay: -0.1s}
+.rainbowRing:nth-of-type(9) {animation-delay: -0.05s}
+
+
+
+
+
+
+
+
+
+
 
 @keyframes star1Opacity {
     0% {opacity: 0}
