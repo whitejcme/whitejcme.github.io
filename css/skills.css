@@ -10,6 +10,9 @@
     position: relative;
 }
 
+
+
+
 .skillCenterOuter {
     position: absolute;
     left: 50%;
@@ -74,6 +77,173 @@
 .skillCenterBannerMain > .bannerRod:after {
     right: -10px;
 }
+.skillCenterBannerMain > .bannerRod > .bannerRodDeco {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: rgb(170, 170, 149);
+    position: absolute;
+    top: -5px;
+}
+.skillCenterBannerMain > .bannerRod > .bannerRodDeco:first-child {
+    left: -27px;
+}
+.skillCenterBannerMain > .bannerRod > .bannerRodDeco:last-child {
+    right: -27px;
+}
+
+
+
+
+.skillLeftOuter {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 100px;
+    left: 10%;
+}
+.skillSideBannerMain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: beige;
+}
+.skillSideBannerMain:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 20px solid beige;
+}
+
+.skillSideBannerMain > .bannerRod {
+    width: 160px;
+    height: 10px;
+    background: gold;
+    position: absolute;
+    top: 5px;
+    left: -20px;
+}
+.skillSideBannerMain > .bannerRod:before, 
+.skillSideBannerMain > .bannerRod:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    background: gold;
+    border-radius: 5px;
+    top: -3px;
+}
+.skillSideBannerMain > .bannerRod:before {
+    left: -5px;
+}
+.skillSideBannerMain > .bannerRod:after {
+    right: -5px;
+}
+
+.skillSideBannerMain > .bannerTop {
+    width: 100%;
+    height: 20px;
+    background: rgb(68, 68, 60);
+    position: absolute;
+}
+.skillSideBannerMain > .bannerTop > div {
+    width: 26px;
+    height: 10px;
+    background: rgb(68, 68, 60);
+    position: absolute;
+    top: 100%;
+    border-radius: 0 0 3px 3px;
+}
+.skillSideBannerMain > .bannerTop > div:nth-of-type(2) {
+    left: 31px;
+}
+.skillSideBannerMain > .bannerTop > div:nth-of-type(3) {
+    right: 31px;
+}
+.skillSideBannerMain > .bannerTop > div:nth-of-type(4) {
+    right: 0;
+}
+
+.skillSideBannerMain > .hornLeft {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 40px solid gold;
+    border-bottom: 25px solid transparent;
+    position: absolute;
+    top: -15px;
+    left: -50px;
+}
+.skillSideBannerMain > .hornLeft:after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 56px;
+    background: rgb(221, 188, 0);
+    border-radius: 3px;
+    left: -47px;
+    top: -27px;
+}
+
+
+.skillRightOuter {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 100px;
+    right: 10%;
+}
+
+.skillSideBannerMain > .hornRight {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 40px solid gold;
+    border-bottom: 25px solid transparent;
+    position: absolute;
+    top: -15px;
+    right: -50px;
+}
+.skillSideBannerMain > .hornRight:after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 56px;
+    background: rgb(221, 188, 0);
+    border-radius: 3px;
+    right: -47px;
+    top: -27px;
+}
+
+
+
+
+
+@media screen and (max-width: 575px) {
+    .skillsRanked {
+        height: 600px;
+    }
+    .skillCenterOuter {
+        top: 40px;
+    }
+    .skillLeftOuter {
+        left: 50%;
+        top: 280px;
+        transform: translate(-50%);
+    }
+    
+    .skillRightOuter {
+        right: initial;
+        left: 50%;
+        top: 460px;
+        transform: translate(-50%);
+    }
+}
+
+
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * */
