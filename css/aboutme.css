@@ -31,18 +31,33 @@
     overflow: hidden;
 }
 
-.wordBox {
+.wordBoxOuter {
     width: 100px;
     height: 100px;
-    border: 1px solid orange;
-    border-radius: 5px;
-    font-family: 'Copse', serif;
-    font-size: 1em;
     margin: 15px 5px 0;
-    text-align: center;
-    background-color: rgb(255, 209, 123);
-    cursor: pointer;
     position: relative;
+    cursor: pointer;
+}
+.wordBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #EEEEEE, rgb(221, 221, 221));
+}
+.wordBox:hover {
+    background: #EEEEEE;
+}
+.wordBox div {
+    position: absolute;
+}
+.wordBox > .preview {
+    width: 100%;
+    font-family: 'Copse', serif;
+    font-size: 0.9em;
+    text-align: center;
+    bottom: 5px;
 }
 @media screen and (max-width: 991px) {
     .wordBox {
@@ -51,8 +66,373 @@
     }
 }
 .wordBoxSelected {
-    background-color: orange;
+    background-color: white;
 }
+
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * CROWN * * * * * * */
+
+.wordBox.crown > .rightTriangle {
+    width: 0;
+    height: 0;
+    border-bottom: 35px solid gold;
+    top: 30px;
+}
+.wordBox.crown > .rightTriangle.triL {
+    border-right: 40px solid transparent;
+    left: 22px;
+    transform: skew(8deg);
+}
+.wordBox.crown > .rightTriangle.triR {
+    border-left: 40px solid transparent;
+    right: 22px;
+    transform: skew(-8deg);
+}
+.wordBox.crown > .triCenter {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 40px solid gold;
+    top: 20px;
+    left: 24px;
+}
+.wordBox.crown .crownTop {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #EDC951;
+    top: -12px;
+}
+.wordBox.crown > .triL > .crownTop {
+    transform: skew(-8deg);
+    left: -5px;
+}
+.wordBox.crown > .triR > .crownTop {
+    transform: skew(8deg);
+    left: -2px;
+}
+.wordBox.crown > .triCenter > .crownTop {
+    left: -4px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* STAR WAND */
+
+.wordBox.starwand > .starshape {
+    position: absolute;
+    display: inline-block;
+    width: 0; height: 0;
+    margin-left: .9em; margin-right: .9em; margin-bottom: 1.2em;
+    border-right: .3em solid transparent; border-bottom: .7em solid gold; border-left: .3em solid transparent;
+    font-size: 22px;
+    top: 15px;
+    left: 5px;
+    transform: rotate(-45deg);
+}
+.wordBox.starwand > .starshape:before, .wordBox.starwand > .starshape:after {
+    content: '';
+    display: block;
+    width: 0; height: 0;
+    position: absolute;
+    top: .6em; left: -1em;
+    border-right: 1em solid transparent; border-bottom: .7em solid gold; border-left: 1em solid transparent;
+    -webkit-transform: rotate(-35deg); transform: rotate(-35deg);
+}
+.wordBox.starwand > .starshape:after {-webkit-transform: rotate(35deg); transform: rotate(35deg);}
+.wordBox.starwand > .starshape > .wand {
+    height: 50px;
+    width: 4px;
+    background-color: #EDC951;
+    top: 20px;
+    left: -2px;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* HEART */
+
+.wordBox.heart > .heartshape {
+    width: 100px;
+    height: 90px;
+    top: 14px;
+    left: 18px;
+}
+.wordBox.heart > .heartshape:before,
+.wordBox.heart > .heartshape:after {
+  position: absolute;
+  content: "";
+  left: 29px;
+  top: 0;
+  width: 30px;
+  height: 50px;
+  background: gold;
+  border-radius: 30px 30px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  box-sizing: border-box;
+}
+.wordBox.heart > .heartshape:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+  border-width: 0 5px 0 0;
+  border-style: solid;
+  border-color: #EDC951
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* DIAMOND */
+
+.wordBox.diamond > .cut-diamond {
+    border-style: solid;
+    border-color: transparent transparent gold transparent;
+    border-width: 0 15px 15px 15px;
+    height: 0;
+    width: 35px;
+    box-sizing: content-box;
+    top: 12px;
+    left: 15px;
+}
+.wordBox.diamond > .cut-diamond:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #EDC951 transparent transparent transparent;
+    border-width: 40px 33px 0 33px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* SWORD */
+.wordBox.sword > .pentagon {
+    top: 15px;
+    left: 38px;
+    width: 10px;
+    box-sizing: content-box;
+    border-width: 40px 6px 0;
+    border-style: solid;
+    border-color: gold transparent;
+}
+.wordBox.sword > .pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -47px;
+    left: -6px;
+    border-width: 0 11px 7px;
+    border-style: solid;
+    border-color: transparent transparent gold;
+}
+.wordBox.sword > .pentagon > .recHor {
+    width: 30px;
+    height: 3px;
+    left: -10px;
+    background-color: #EDC951;
+    border-radius: 2px;
+}
+.wordBox.sword > .pentagon > .recHor:before,
+.wordBox.sword > .pentagon > .recHor:after {
+    content: "";
+    position: absolute;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background-color: #EDC951;
+    top: -1.5px;
+}
+.wordBox.sword > .pentagon > .recHor:before {left: -2px;}
+.wordBox.sword > .pentagon > .recHor:after {right: -2px;}
+
+.wordBox.sword > .pentagon > .recVer {
+    width: 8px;
+    height: 15px;
+    background-color: #EDC951;
+    left: 1px;
+}
+.wordBox.sword > .pentagon > .recVer:after {
+    content: "";
+    width: 14px;
+    height: 6px;
+    position: absolute;
+    background-color: #EDC951;
+    border-radius: 4px;
+    top: 70%;
+    left: -37%;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* BANNER */
+
+.wordBox.banner > .flag {
+    width: 36px;
+    height: 47px;
+    background-color: gold;
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.wordBox.banner > .flag:before, .wordBox.banner > .flag:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 100%;
+    border-top: 10px solid gold;
+
+}
+.wordBox.banner > .flag:before {
+    border-right: 18px solid transparent;
+}
+.wordBox.banner > .flag:after {
+    border-left: 18px solid transparent;
+    right: 0;
+}
+.wordBox.banner > .flag > .flaghanger {
+    width: 160%;
+    height: 3px;
+    background-color: #EDC951;
+    left: -30%;
+}
+.wordBox.banner > .flag > .flaghanger:before,
+.wordBox.banner > .flag > .flaghanger:after {
+    content: "";
+    position: absolute;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background-color: #EDC951;
+    top: -1.5px;
+}
+.wordBox.banner > .flag > .flaghanger:before {left: -2px;}
+.wordBox.banner > .flag > .flaghanger:after {right: -2px;}
+
+
+
+
+@media screen and (max-width: 991px) {
+    .wordBox {
+        width: 70px; height: 70px;
+    }
+    .wordBox > .preview {
+        bottom: 2px;
+    }
+    .wordBox.crown > .rightTriangle {
+        border-bottom-width: 20px;
+        top: 23px;
+    }
+    .wordBox.crown > .rightTriangle.triL {
+        border-right-width: 30px;
+        left: 15px;
+    }
+    .wordBox.crown > .rightTriangle.triR {
+        border-left-width: 30px;
+        right: 15px;
+    }
+    .wordBox.crown > .triCenter {
+        border-left-width: 18px;
+        border-right-width: 18px;
+        border-bottom-width: 23px;
+        top: 16px;
+        left: 16px;
+    }
+
+    .wordBox.starwand > .starshape {
+        font-size: 15px;
+        top: 8px;
+        left: 2px;
+    }
+    .wordBox.starwand > .starshape > .wand {
+        height: 30px;
+        width: 3px;
+        top: 15px;
+    }
+
+    .wordBox.heart > .heartshape {
+        width: 70px;
+        height: 60px;
+        top: 8px;
+        left: 15px;
+    }
+
+    .wordBox.heart > .heartshape:before,
+    .wordBox.heart > .heartshape:after {
+        width: 20px;
+        height: 35px;
+        left: 18px;
+    }
+    .wordBox.heart > .heartshape:after {
+        left: -2px;
+    }
+
+    .wordBox.diamond > .cut-diamond {
+        border-width: 0 10px 10px 10px;
+        width: 20px;
+        top: 8px;
+        left: 13px;
+    }
+    .wordBox.diamond > .cut-diamond:after {
+        border-width: 25px 20px 0 20px;
+        top: 10px;
+        left: -10px;
+    }
+
+    .wordBox.sword > .pentagon {
+        width: 7px;
+        border-width: 25px 4px 0;
+        left: 25px;
+        top: 8px;
+    }
+    .wordBox.sword > .pentagon:before {
+        border-width: 0 7px 5px;
+        top: -30px;
+        left: -4px;
+    }
+    .wordBox.sword > .pentagon > .recHor {
+        width: 26px;
+        top: -1px;
+    }
+    .wordBox.sword > .pentagon > .recVer {
+        width: 5px;
+        height: 12px;
+    }
+    .wordBox.sword > .pentagon > .recVer:after {
+        width: 9px;
+        height: 4px;
+    }
+
+    .wordBox.banner > .flag {
+        width: 25px;
+        height: 30px;
+        top: 7px;
+    }
+
+}
+
+
+
+
+
+
 
 .content h3.aboutmeWord {
     padding: 0;

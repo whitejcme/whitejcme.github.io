@@ -306,10 +306,11 @@
                                 <h2>About&nbsp;&nbsp;Me</h2>
                                 <div class="aboutmeContent">
                                     <div class="aboutmeLeftPage">
-                                        <div class="wordBox" 
-                                            v-for="text in allText" 
+                                        <div class="wordBoxOuter" 
+                                            v-for="text in allText"
+                                            v-html="text.html"
                                             :class="{wordBoxSelected: text.current}"
-                                            @click="setCurrent(text)">{{text.preview}}</div>
+                                            @click="setCurrent(text)"></div>
                                     </div> <!-- .aboutmeLeftPage -->
                                     <div class="aboutmeRightPage">
                                         <h3 class="aboutmeWord"><span v-for="letter in currWord">{{letter}}</span></h3>
