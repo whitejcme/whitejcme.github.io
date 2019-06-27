@@ -91,6 +91,13 @@
     right: -27px;
 }
 
+.skillCenterBannerMain > .centerBannerText {
+    position: absolute;
+    width: 100%; height: 100%;
+    border: 1px solid;
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+}
 
 
 
@@ -216,6 +223,16 @@
     border-radius: 3px;
     right: -47px;
     top: -27px;
+}
+
+
+.skillSideBannerMain > .sideBannerText {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    top: 30px; left: 0;
+    border: 1px solid;
+    font-family: 'Berkshire Swash', cursive;
 }
 
 

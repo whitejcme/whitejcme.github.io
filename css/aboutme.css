@@ -20,7 +20,8 @@
 }
 @media screen and (max-width: 575px) {
     .aboutmeLeftPage, .aboutmeRightPage {
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -44,9 +45,10 @@
     height: 100%;
     border: 2px solid rgb(201, 201, 201);
     border-radius: 5px;
+    transition: all 0.1s;
     background: linear-gradient(to bottom, #EEEEEE, rgb(221, 221, 221));
 }
-.wordBox:hover {
+.wordBoxOuter:hover .wordBox {
     background: #EEEEEE;
 }
 .wordBox div {
@@ -65,8 +67,8 @@
         height: 70px;
     }
 }
-.wordBoxSelected {
-    background-color: white;
+.wordBoxSelected .wordBox {
+    background: white;
 }
 
 
@@ -128,7 +130,7 @@
 /* STAR WAND */
 
 .wordBox.starwand > .starshape {
-    position: absolute;
+    /* position: absolute; */
     display: inline-block;
     width: 0; height: 0;
     margin-left: .9em; margin-right: .9em; margin-bottom: 1.2em;
@@ -330,7 +332,7 @@
 
 
 @media screen and (max-width: 991px) {
-    .wordBox {
+    .wordBoxOuter {
         width: 70px; height: 70px;
     }
     .wordBox > .preview {

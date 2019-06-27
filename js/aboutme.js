@@ -20,7 +20,7 @@ const aboutmeApp = new Vue({
             },
             {
                 preview: "Honest",
-                html: "<div class='wordBox sword'><div class='pentagon'><div class='recHor'></div><div class='recVer'></div></div><div class='preview'>Honesty</div></div>",
+                html: "<div class='wordBox sword'><div class='pentagon'><div class='recHor'></div><div class='recVer'></div></div><div class='preview'>Honest</div></div>",
                 word: "Honest",
                 blurb: "What my friends say about me :)",
                 current: false
