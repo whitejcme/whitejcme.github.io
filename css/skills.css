@@ -26,7 +26,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: beige;
+    background: #DCDCC6;
 }
 .skillCenterBannerMain:before, .skillCenterBannerMain:after {
     content: "";
@@ -34,7 +34,7 @@
     width: 0;
     height: 0;
     top: 100%;
-    border-top: 50px solid beige;
+    border-top: 50px solid #DCDCC6;
 }
 .skillCenterBannerMain:before {
     border-right: 75px solid transparent;
@@ -47,7 +47,7 @@
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: beige;
+    background-color: #DCDCC6;
     bottom: 100%;
 }
 .skillCenterBannerMain > .bannerTop:nth-of-type(2) {left: 40px;}
@@ -56,7 +56,7 @@
 .skillCenterBannerMain > .bannerRod {
     width: 230px;
     height: 10px;
-    background-color: rgb(170, 170, 149);
+    background-color: #003694;
     position: absolute;
     top: -25px;
     left: -40px;
@@ -67,7 +67,7 @@
     position: absolute;
     width: 10px;
     height: 18px;
-    background: rgb(170, 170, 149);
+    background: #003694;
     top: -4px;
     border-radius: 2px;
 }
@@ -80,7 +80,7 @@
 .skillCenterBannerMain > .bannerRod > .bannerRodDeco {
     width: 20px; height: 20px;
     border-radius: 50%;
-    background: rgb(170, 170, 149);
+    background: #003694;
     position: absolute;
     top: -5px;
 }
@@ -94,7 +94,7 @@
 .skillCenterBannerMain > .centerBannerText {
     position: absolute;
     width: 100%; height: 100%;
-    border: 1px solid;
+    border: 1px solid #EEEEEE;
     text-align: center;
     font-family: 'Berkshire Swash', cursive;
 }
@@ -153,13 +153,13 @@
 .skillSideBannerMain > .bannerTop {
     width: 100%;
     height: 20px;
-    background: rgb(68, 68, 60);
+    background: #004ac9;
     position: absolute;
 }
 .skillSideBannerMain > .bannerTop > div {
     width: 26px;
     height: 10px;
-    background: rgb(68, 68, 60);
+    background: #004ac9;
     position: absolute;
     top: 100%;
     border-radius: 0 0 3px 3px;
@@ -231,7 +231,7 @@
     width: 100%;
     height: 90px;
     top: 30px; left: 0;
-    border: 1px solid;
+    border: 1px solid #EEEEEE;
     font-family: 'Berkshire Swash', cursive;
 }
 
@@ -295,7 +295,7 @@
 .skillScrollRoll {
     width: 30px;
     height: 120px;
-    background-color: rgb(212, 212, 186);
+    background-color: #DCDCC6;
     position: relative;
     border-radius: 2px;
 }
@@ -303,7 +303,7 @@
     position: absolute;
     width: 20px;
     height: 7px;
-    background-color: rgb(170, 170, 149);
+    background-color: #C4C4B0;
     left: 5px;
 }
 .skillScrollRoll > .rollTop, .skillScrollRoll > .rollTop:after {
@@ -319,7 +319,7 @@
     position: absolute;
     width: 30%;
     height: 100%;
-    background-color: rgb(146, 146, 128);
+    background-color: #ABAB9A;
     left: 50%;
     transform: translate(-50%);
 }

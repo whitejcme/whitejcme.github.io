@@ -38,18 +38,19 @@
     margin: 15px 5px 0;
     position: relative;
     cursor: pointer;
+    transition: all 0.3s;
 }
 .wordBox {
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 2px solid rgb(201, 201, 201);
+    border: 4px solid #EEEEEE;
     border-radius: 5px;
-    transition: all 0.1s;
-    background: linear-gradient(to bottom, #EEEEEE, rgb(221, 221, 221));
+    transition: all 0.3s;
+    background: linear-gradient(to bottom, #FFF, #EEEEEE);
 }
 .wordBoxOuter:hover .wordBox {
-    background: #EEEEEE;
+    transform: translateY(-5px);
 }
 .wordBox div {
     position: absolute;
@@ -69,6 +70,7 @@
 }
 .wordBoxSelected .wordBox {
     background: white;
+    border-color: goldenrod;
 }
 
 
@@ -99,8 +101,8 @@
 .wordBox.crown > .triCenter {
     width: 0;
     height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
     border-bottom: 40px solid gold;
     top: 20px;
     left: 24px;
@@ -136,8 +138,8 @@
     margin-left: .9em; margin-right: .9em; margin-bottom: 1.2em;
     border-right: .3em solid transparent; border-bottom: .7em solid gold; border-left: .3em solid transparent;
     font-size: 22px;
-    top: 15px;
-    left: 5px;
+    top: 12px;
+    left: 2px;
     transform: rotate(-45deg);
 }
 .wordBox.starwand > .starshape:before, .wordBox.starwand > .starshape:after {
@@ -206,8 +208,8 @@
     height: 0;
     width: 35px;
     box-sizing: content-box;
-    top: 12px;
-    left: 15px;
+    top: 10px;
+    left: 13px;
 }
 .wordBox.diamond > .cut-diamond:after {
     content: "";
@@ -226,8 +228,8 @@
 
 /* SWORD */
 .wordBox.sword > .pentagon {
-    top: 15px;
-    left: 38px;
+    top: 12px;
+    left: 35px;
     width: 10px;
     box-sizing: content-box;
     border-width: 40px 6px 0;
@@ -351,8 +353,8 @@
         right: 15px;
     }
     .wordBox.crown > .triCenter {
-        border-left-width: 18px;
-        border-right-width: 18px;
+        border-left-width: 15px;
+        border-right-width: 15px;
         border-bottom-width: 23px;
         top: 16px;
         left: 16px;
@@ -360,8 +362,8 @@
 
     .wordBox.starwand > .starshape {
         font-size: 15px;
-        top: 8px;
-        left: 2px;
+        top: 6px;
+        left: 0px;
     }
     .wordBox.starwand > .starshape > .wand {
         height: 30px;
@@ -390,7 +392,7 @@
         border-width: 0 10px 10px 10px;
         width: 20px;
         top: 8px;
-        left: 13px;
+        left: 11px;
     }
     .wordBox.diamond > .cut-diamond:after {
         border-width: 25px 20px 0 20px;
@@ -401,7 +403,7 @@
     .wordBox.sword > .pentagon {
         width: 7px;
         border-width: 25px 4px 0;
-        left: 25px;
+        left: 23px;
         top: 8px;
     }
     .wordBox.sword > .pentagon:before {
