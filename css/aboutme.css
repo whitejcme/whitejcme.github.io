@@ -72,7 +72,12 @@
     background: white;
     border-color: goldenrod;
 }
-
+.wordBoxOuter.wordBoxSelected {
+    cursor: initial;
+}
+.wordBoxOuter.wordBoxSelected:hover .wordBox {
+    transform: translateY(0);
+}
 
 
 
@@ -425,8 +430,8 @@
     }
 
     .wordBox.banner > .flag {
-        width: 25px;
-        height: 30px;
+        width: 22px;
+        height: 25px;
         top: 7px;
     }
 

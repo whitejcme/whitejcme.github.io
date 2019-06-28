@@ -94,9 +94,11 @@
 .skillCenterBannerMain > .centerBannerText {
     position: absolute;
     width: 100%; height: 100%;
-    border: 1px solid #EEEEEE;
+    line-height: 150px;
+    /* border: 1px solid #EEEEEE; */
     text-align: center;
     font-family: 'Berkshire Swash', cursive;
+    font-size: 1.5em;
 }
 
 
@@ -230,9 +232,12 @@
     position: absolute;
     width: 100%;
     height: 90px;
+    line-height: 90px;
+    text-align: center;
     top: 30px; left: 0;
-    border: 1px solid #EEEEEE;
+    /* border: 1px solid #EEEEEE; */
     font-family: 'Berkshire Swash', cursive;
+    font-size: 1.5em;
 }
 
 
