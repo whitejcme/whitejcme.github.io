@@ -15,7 +15,7 @@ const aboutmeApp = new Vue({
                 preview: "TCK",
                 html: "<div class='wordBox diamond'><div class='cut-diamond'></div><div class='preview'>TCK</div></div>",
                 word: "Third Culture Kid",
-                blurb: "Korea will always be my motherland, but I equally value the American, German, and Malaysian aspects of my cultural background. Growing up in different countries has made my capabilities so much more unique and dynamic.",
+                blurb: "Korea will always be my motherland, but I equally value the American, German, and Malaysian aspects of my cultural background. Growing up in different countries has made my capabilities and character so much more unique and dynamic!",
                 current: false
             },
             {
@@ -37,6 +37,13 @@ const aboutmeApp = new Vue({
                 html: "<div class='wordBox banner'><div class='flag'><div class='flaghanger'></div></div><div class='preview'>Motto</div></div>",
                 word: 'Everything happens for a reason.',
                 blurb: 'Here’s a life motto that keeps me going whenever I come across hardship. What has already happened cannot be undone or forgotten, so just try to make the most out of the experience and move on. I do my best to stay optimistic and focus on the bright side :D',
+                current: false
+            },
+            {
+                preview: "SS",
+                html: "<div class='wordBox scroll'><div class='cylinder'><div class='strap'></div></div><div class='preview'>SS</div></div>",
+                word: 'Social Sciences',
+                blurb: 'My academic background was originally in the social sciences, with a B.A in International Relations and Communication. Although I’m now pursuing a career in the IT sector, my two majors still greatly contribute to how I interpret the world around me.',
                 current: false
             }
         ],

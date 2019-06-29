@@ -116,7 +116,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #EDC951;
+    background-color: rgb(228, 183, 34);
     top: -12px;
 }
 .wordBox.crown > .triL > .crownTop {
@@ -160,7 +160,7 @@
 .wordBox.starwand > .starshape > .wand {
     height: 50px;
     width: 4px;
-    background-color: #EDC951;
+    background-color: rgb(228, 183, 34);
     top: 20px;
     left: -2px;
 }
@@ -198,7 +198,7 @@
   transform-origin: 100% 100%;
   border-width: 0 5px 0 0;
   border-style: solid;
-  border-color: #EDC951
+  border-color: rgb(228, 183, 34)
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -224,7 +224,7 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-color: #EDC951 transparent transparent transparent;
+    border-color: rgb(228, 183, 34) transparent transparent transparent;
     border-width: 40px 33px 0 33px;
 }
 
@@ -256,7 +256,7 @@
     width: 30px;
     height: 3px;
     left: -10px;
-    background-color: #EDC951;
+    background-color: rgb(228, 183, 34);
     border-radius: 2px;
 }
 .wordBox.sword > .pentagon > .recHor:before,
@@ -265,7 +265,7 @@
     position: absolute;
     width: 6px; height: 6px;
     border-radius: 50%;
-    background-color: #EDC951;
+    background-color: rgb(228, 183, 34);
     top: -1.5px;
 }
 .wordBox.sword > .pentagon > .recHor:before {left: -2px;}
@@ -274,7 +274,7 @@
 .wordBox.sword > .pentagon > .recVer {
     width: 8px;
     height: 15px;
-    background-color: #EDC951;
+    background-color: rgb(228, 183, 34);
     left: 1px;
 }
 .wordBox.sword > .pentagon > .recVer:after {
@@ -282,7 +282,7 @@
     width: 14px;
     height: 6px;
     position: absolute;
-    background-color: #EDC951;
+    background-color: rgb(228, 183, 34);
     border-radius: 4px;
     top: 70%;
     left: -37%;
@@ -320,7 +320,7 @@
 .wordBox.banner > .flag > .flaghanger {
     width: 160%;
     height: 3px;
-    background-color: #EDC951;
+    background-color: rgb(228, 183, 34);
     left: -30%;
 }
 .wordBox.banner > .flag > .flaghanger:before,
@@ -329,11 +329,56 @@
     position: absolute;
     width: 6px; height: 6px;
     border-radius: 50%;
-    background-color: #EDC951;
+    background-color: rgb(228, 183, 34);
     top: -1.5px;
 }
 .wordBox.banner > .flag > .flaghanger:before {left: -2px;}
 .wordBox.banner > .flag > .flaghanger:after {right: -2px;}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* SCROLL */
+
+.wordBox.scroll > .cylinder {
+    width: 25%;
+    height: 55%;
+    border-radius: 0 0 10px 10px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    background: gold;
+}
+.wordBox.scroll > .cylinder:after {
+    content: "";
+    width: 100%;
+    height: 25%;
+    border-radius: 100%;
+    background: rgb(228, 183, 34);
+    position: absolute;
+    top: -10%;
+}
+
+.wordBox.scroll > .cylinder > .strap {
+    width: 100%;
+    height: 10%;
+    background: rgb(228, 183, 34);
+    top: 40%;
+}
+.wordBox.scroll > .cylinder > .strap:after {
+    content: "";
+    width: 80%;
+    height: 120%;
+    background: rgb(228, 183, 34);
+    position: absolute;
+    top: 140%;
+    right: 100%;
+    transform: skewY(-40deg);
+}
+
+
+
 
 
 
@@ -427,12 +472,17 @@
     .wordBox.sword > .pentagon > .recVer:after {
         width: 9px;
         height: 4px;
+        left: -50%;
     }
 
     .wordBox.banner > .flag {
         width: 22px;
         height: 25px;
         top: 7px;
+    }
+
+    .wordBox.scroll > .cylinder {
+        top: 15%;
     }
 
 }
