@@ -1,6 +1,5 @@
 
 .js body {
-	/* overflow: hidden; */
 	overflow-y: auto;
 }
 
@@ -40,13 +39,8 @@
 	width: 32px;
 	height: 32px;
 	bottom: 0;
-	/* background-color: #f1103a; */
 	background-color: rgb(238, 68, 62);
 	border-radius: 50%;
-	/* border: 1px solid #f1103a; */
-	/* line-height: 32px; */
-	/* text-align: center; */
-	/* speak: none; */
 	cursor: pointer;
 }
 .nav-btn:hover {
@@ -82,12 +76,6 @@
 	border-right: 10px solid white;
 	left: 17%;
 }
-
-
-/* .nav-btn i {
-	position: absolute;
-	left: 0; top: 0;
-} */
 
 .nav-btn#bb-nav-prev {
 	left: 12px;
@@ -146,25 +134,16 @@
 }
 
 .content h2 {
-	/* font-weight: 300; */
 	font-size: 3em;
-	/* padding: 0 0 10px; */
 	color: #333;
 	margin: 0 1% 20px;
 	text-align: left;
-	/* box-shadow: 0 10px 0 rgba(0,0,0,0.02);
-	text-shadow: 0 0 2px #fff; */
 	font-family: 'Homemade Apple', cursive;
 }
-
-/* .no-js .content h2 {
-	padding: 40px 1% 20px;
-} */
 
 .content p {
 	font-size: 1.2em;
 	line-height: 1.6;
-	/* font-weight: 300; */
 	padding: 5px 8%;
 	text-align: justify;
 	font-family: 'Copse', serif;
