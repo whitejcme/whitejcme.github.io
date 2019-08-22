@@ -1,0 +1,439 @@
+@import './style.scss';
+
+
+.wordBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #EEEEEE;
+  border-radius: 5px;
+  transition: all 0.3s;
+  background: linear-gradient(to bottom, #FFF, #EEEEEE);
+  div {position: absolute;}
+  .wordBoxOuter:hover & {
+    transform: translateY(-5px);
+  }
+}
+.wordBoxSelected {
+  .wordBox {
+    background: white;
+    border-color: $yellowBorder;
+  }
+  &.wordBoxOuter {
+    cursor: initial;
+    &:hover .wordBox {
+      transform: translateY(0);
+    }
+  }
+}
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * CROWN * * * * * * */
+
+.wordBox.crown {
+  & > .rightTriangle {
+    width: 0;
+    height: 0;
+    border-bottom: 35px solid $yellowMd;
+    top: 38px;
+    @include maxWidth(600) {
+      border-bottom-width: 30px;
+      top: 32px;
+    }
+    &.triL {
+      border-right: 40px solid transparent;
+      left: 19px;
+      transform: skew(8deg);
+      @include maxWidth(600) {
+        border-right-width: 35px;
+        left: 16px;
+      }
+      .crownTop {
+        transform: skew(-8deg);
+        left: -5px;
+      }
+    }
+    &.triR {
+      border-left: 40px solid transparent;
+      right: 19px;
+      transform: skew(-8deg);
+      @include maxWidth(600) {
+        border-left-width: 35px;
+        right: 16px;
+      }
+      .crownTop {
+        transform: skew(8deg);
+        left: -2px;
+      }
+    }
+  }
+  & > .triCenter {
+    width: 0;
+    height: 0;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 40px solid $yellowMd;
+    top: 28px;
+    left: 24px;
+    @include maxWidth(600) {
+      border-left-width: 20px;
+      border-right-width: 20px;
+      border-bottom-width: 28px;
+      top: 24px;
+      left: 19px;
+    }
+    .crownTop {
+      left: -3.5px;
+    }
+  }
+  .crownTop {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $yellowDk;
+    top: -12px;
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* STAR WAND */
+
+.wordBox.starwand {
+  & > .starshape {
+    display: inline-block;
+    width: 0; height: 0;
+    margin-left: .9em; margin-right: .9em; margin-bottom: 1.2em;
+    border-right: .3em solid transparent; border-bottom: .7em solid $yellowMd; border-left: .3em solid transparent;
+    font-size: 22px;
+    top: 22px;
+    left: 2px;
+    transform: rotate(-45deg);
+    @include maxWidth(600) {
+      font-size: 18px;
+      top: 15px; 
+      left: 0px;
+    }
+    &::before, &::after {
+      display: block;
+      width: 0; height: 0;
+      position: absolute;
+      top: .6em; left: -1em;
+      border-right: 1em solid transparent; border-bottom: .7em solid $yellowMd; border-left: 1em solid transparent;
+      -webkit-transform: rotate(-35deg); transform: rotate(-35deg);
+    }
+    &::after {
+      -webkit-transform: rotate(35deg); transform: rotate(35deg);
+    }
+    & > .wand {
+      height: 50px;
+      width: 4px;
+      background-color: $yellowDk;
+      top: 20px;
+      left: -2px;
+      @include maxWidth(600) {
+        height: 45px;
+        width: 3px;
+        top: 15px;
+      }
+    }
+  }
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* HEART */
+
+.wordBox.heart {
+  & > .heartshape {
+    width: 100px;
+    height: 90px;
+    top: 24px;
+    left: 18px;
+    &::before, &::after {
+      position: absolute;
+      left: 29px;
+      top: 0;
+      width: 30px;
+      height: 50px;
+      background: $yellowMd;
+      border-radius: 30px 30px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+      box-sizing: border-box;
+    }
+    &::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+      border-width: 0 5px 0 0;
+      border-style: solid;
+      border-color: $yellowDk;
+    }
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* DIAMOND */
+
+.wordBox.diamond {
+  & > .cut-diamond {
+    border-style: solid;
+    border-color: transparent transparent $yellowMd transparent;
+    border-width: 0 15px 15px 15px;
+    height: 0;
+    width: 35px;
+    box-sizing: content-box;
+    top: 20px;
+    left: 13px;
+    @include maxWidth(600) {
+      border-width: 0 13px 13px 13px;
+      width: 27px;
+      top: 18px;
+      left: 11px;
+    }
+    &::after {
+      position: absolute;
+      top: 15px;
+      left: -15px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: $yellowDk transparent transparent transparent;
+      border-width: 40px 33px 0 33px;
+      @include maxWidth(600) {
+        border-width: 33px 26px 0 26px;
+        top: 13px;
+        left: -12px;
+      }
+    }
+  }
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* SWORD */
+
+
+.wordBox.sword {
+  & > .pentagon {
+    top: 22px;
+    left: 35px;
+    width: 10px;
+    box-sizing: content-box;
+    border-width: 40px 6px 0;
+    border-style: solid;
+    border-color: $yellowMd transparent;
+    @include maxWidth(600) {
+      width: 9px;
+      border-width: 30px 5px 0;
+      left: 28px;
+      top: 17px;
+    }
+    &::before {
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -47px;
+      left: -6px;
+      border-width: 0 11px 7px;
+      border-style: solid;
+      border-color: transparent transparent $yellowMd;
+      @include maxWidth(600) {
+        border-width: 0 10px 6px;
+        top: -36px;
+        left: -5px;
+      }
+    }
+    & > .recHor {
+      width: 30px;
+      height: 3px;
+      left: -10px;
+      background-color: $yellowDk;
+      border-radius: 2px;
+      @include maxWidth(600) {
+        width: 28px;
+        top: 0px;
+        left: -9px;
+      }
+      &::before, &::after {
+        position: absolute;
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background-color: $yellowDk;
+        top: -1.5px;
+      }
+      &::before {left: -2px;}
+      &::after {right: -2px;}
+    }
+    & > .recVer {
+      width: 8px;
+      height: 15px;
+      background-color: $yellowDk;
+      left: 1px;
+      @include maxWidth(600) {
+        width: 7px;
+        height: 18px;
+        left: 1.25px;
+      }
+      &::after {
+        width: 14px;
+        height: 6px;
+        position: absolute;
+        background-color: $yellowDk;
+        border-radius: 4px;
+        top: 80%;
+        left: -37%;
+        @include maxWidth(600) {
+          width: 14px;
+          height: 5px;
+          left: -48%;
+        }
+      }
+    }
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* BANNER */
+
+.wordBox.banner {
+  & > .flag {
+    width: 36px;
+    height: 47px;
+    background-color: $yellowMd;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    @include maxWidth(600) {
+      width: 30px;
+      height: 38px;
+      top: 16px;
+    }
+    &::before, &::after {
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 100%;
+      border-top: 10px solid $yellowMd;
+    }
+    &::before {
+      border-right: 18px solid transparent;
+    }
+    &::after {
+      border-left: 18px solid transparent;
+      right: 0;
+    }
+    & > .flaghanger {
+      width: 160%;
+      height: 3px;
+      background-color: $yellowDk;
+      left: -30%;
+      &::before, &::after {
+        position: absolute;
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background-color: $yellowDk;
+        top: -1.5px;
+      }
+      &::before {left: -2px;}
+      &::after {right: -2px;}
+    }
+  }
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* SCROLL */
+
+.wordBox.scroll {
+  & > .cylinder {
+    width: 25%;
+    height: 55%;
+    border-radius: 0 0 10px 10px;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%);
+    background: $yellowMd;
+    &::after {
+      width: 100%;
+      height: 25%;
+      border-radius: 100%;
+      background: $yellowDk;
+      position: absolute;
+      top: -10%;
+    }
+    & > .strap {
+      width: 100%;
+      height: 10%;
+      background: $yellowDk;
+      top: 40%;
+      &::after {
+        width: 80%;
+        height: 120%;
+        background: $yellowDk;
+        position: absolute;
+        top: 140%;
+        right: 100%;
+        transform: skewY(-40deg);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+// @include maxWidth(600) {
+
+
+//     .wordBox.heart > .heartshape {
+//         width: 70px;
+//         height: 60px;
+//         top: 8px;
+//         left: 15px;
+//     }
+
+//     .wordBox.heart > .heartshape:before,
+//     .wordBox.heart > .heartshape:after {
+//         width: 20px;
+//         height: 35px;
+//         left: 18px;
+//     }
+//     .wordBox.heart > .heartshape:after {
+//         left: -2px;
+//     }
+
+
+// }
+
+
+
+
+
+
+

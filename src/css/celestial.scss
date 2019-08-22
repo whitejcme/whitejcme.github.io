@@ -1,0 +1,508 @@
+@import "@/css/style.scss";
+
+$skyColorTime: 30s;
+$skyColorTimeHalf: 15s;
+
+.celestialSection {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+//////////// SUN ////////////////
+
+.sunOuter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%; left: 0;
+  animation: sunRiseY $skyColorTime ease-out  $skyColorTime * -0.3 infinite;
+}
+.sun {
+  animation: sunRiseX $skyColorTime ease-in $skyColorTime * -0.3 infinite;
+  position: absolute;
+  top: 0; right: 50%;
+  i {
+    font-size: 5em;
+    @include mdDown {
+      font-size: 4.5em;
+    }
+    @include smDown {
+      font-size: 4em;
+    }
+    background: -webkit-radial-gradient(circle, #fffc00 0%, #F2C94C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: sunSpin $skyColorTime ease-in-out $skyColorTime * -0.3 infinite;
+  }
+}
+@keyframes sunRiseY {
+  0%, 70%, 100% {top: 100%;}
+  25%, 50% {top: 8%;}
+  60% {top: 0%;}
+}
+@keyframes sunRiseX {
+  0%, 80%, 100% {right: 50%; opacity: 1;}
+  25%, 50% {right: 8%; opacity: 1;}
+  60%, 70% {right: -20%; opacity: 0;}
+  70% {right: -20%; opacity: 0;}
+}
+@keyframes sunSpin {
+  0%, 27% {transform: rotate(0deg);}
+  48%, 100% {transform: rotate(90deg);}
+}
+
+
+
+//////////// MOON ////////////////
+
+.moon {
+  width: 60px;
+  height: 60px;
+  &::after {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    box-shadow: 11px 11px 0 0 #EEEEEE;
+    position: absolute;
+    top: 0; left: 0;
+    transform-origin: top;
+    animation: moonBounce $skyColorTime ease-in-out infinite;
+  }
+  @include mdDown {
+    width: 45px; height: 45px;
+    &::after {
+      box-shadow: 8px 8px 0 0 #EEEEEE;
+    }
+  }
+  position: absolute;
+  top: -20%;
+  right: 8%;
+  opacity: 0;
+  animation: moonRise $skyColorTime ease-in-out infinite;
+}
+@keyframes moonRise {
+  0%, 30%, 70%, 100% {top: -20%; opacity: 0;}
+  40%, 60% {top: 10%; opacity: 1;}
+}
+@keyframes moonBounce {
+  0%, 40%, 60%, 100% {transform: rotate(0deg);}
+  45%, 55% {transform: rotate(15deg);}
+  50% {transform: rotate(-15deg);}
+}
+
+
+
+//////////// STARS ////////////////
+
+@mixin starContainer($size, $top, $left) {
+  width: $size; height: $size;
+  position: absolute;
+  top: $top;
+  left: $left;
+  opacity: 0;
+}
+@mixin starInner($blur, $spread) {
+  width: 100%; height: 100%;
+  position: absolute; top: 0; left: 0;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 $blur $spread white;
+}
+
+@keyframes starShine1{
+  0%, 28%,         72%, 100% {opacity: 0;}
+          30%, 68% {opacity: 1;}
+}
+@keyframes starShine2{
+  0%, 30%,         68%, 100% {opacity: 0;}
+          35%, 66% {opacity: 1;}
+}
+@keyframes starShine3{
+  0%, 29%,         67%, 100% {opacity: 0;}
+          32%, 65% {opacity: 1;}
+}
+@keyframes starShine4{
+  0%, 32%,         70%, 100% {opacity: 0;}
+          33%, 66% {opacity: 1;}
+}
+
+@keyframes starTwinkle1 {
+  0%, 35%, 65%, 100% {opacity: 1;}
+  40%, 42%, 45%, 48%, 50%, 55%, 60%, 63% {opacity: 1;}
+    41%,      47%,      53%,      61% {opacity: 0.05;}
+}
+@keyframes starTwinkle2 {
+  0%, 35%, 65%, 100% {opacity: 1;}
+  37%, 39%, 47%, 50%, 53%, 56%, 57%, 59% {opacity: 1;}
+    38%,      48%,      55%,      58% {opacity: 0.1;}
+}
+@keyframes starTwinkle3 {
+  0%, 35%, 65%, 100% {opacity: 1;}
+  38%, 41%, 43%, 45%, 47%, 49%, 54%, 57% {opacity: 1;}
+    40%,      43%,      48%,      55% {opacity: 0;}
+}
+@keyframes starTwinkle4 {
+  0%, 35%, 65%, 100% {opacity: 1;}
+  42%, 45%, 48%, 50%, 51%, 53%, 62%, 64% {opacity: 1;}
+    43%,      49%,      52%,      63% {opacity: 0.15;}
+}
+
+.star.s1 {
+  @include starContainer(1.5px, 4%, 3%);
+  animation: starShine1 $skyColorTime linear infinite;
+  // @include smDown {display: none;}  // hide on mobile
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle1 $skyColorTime linear infinite;
+  }
+}
+.star.s2 {
+  @include starContainer(2px, 16%, 5%);
+  animation: starShine2 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle3 $skyColorTime linear infinite;
+  }
+}
+.star.s3 {
+  @include starContainer(1.5px, 10%, 11%);
+  animation: starShine1 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle2 $skyColorTime linear infinite;
+  }
+}
+.star.s4 {
+  @include starContainer(2px, 22%, 14%);
+  animation: starShine3 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle1 $skyColorTime linear infinite;
+  }
+}
+.star.s5 {
+  @include starContainer(2px, 15%, 20%);
+  animation: starShine4 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle1 $skyColorTime linear infinite;
+  }
+}
+.star.s6 {
+  @include starContainer(1.5px, 8%, 27%);
+  animation: starShine4 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(2px, 0.5px);
+    animation: starTwinkle4 $skyColorTime linear infinite;
+  }
+}
+.star.s7 {
+  @include starContainer(2px, 12%, 32%);
+  animation: starShine3 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle2 $skyColorTime linear infinite;
+  }
+}
+.star.s8 {
+  @include starContainer(2px, 22%, 36%);
+  animation: starShine1 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle3 $skyColorTime linear infinite;
+  }
+}
+.star.s9 {
+  @include starContainer(2px, 13%, 43%);
+  animation: starShine1 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(3px, 1.5px);
+    animation: starTwinkle1 $skyColorTime linear infinite;
+  }
+}
+.star.s10 {
+  @include starContainer(1.5px, 19%, 48%);
+  animation: starShine2 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle3 $skyColorTime linear infinite;
+  }
+}
+.star.s11 {
+  @include starContainer(2px, 5%, 51%);
+  animation: starShine4 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle4 $skyColorTime linear infinite;
+  }
+}
+.star.s12 {
+  @include starContainer(1px, 10%, 56%);
+  animation: starShine3 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(2px, 1px);
+    animation: starTwinkle2 $skyColorTime linear infinite;
+  }
+}
+.star.s13 {
+  @include starContainer(1.5px, 25%, 64%);
+  animation: starShine2 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle3 $skyColorTime linear infinite;
+  }
+}
+.star.s14 {
+  @include starContainer(1.5px, 8%, 69%);
+  animation: starShine1 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle4 $skyColorTime linear infinite;
+  }
+}
+.star.s15 {
+  @include starContainer(2px, 5%, 75%);
+  animation: starShine4 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle2 $skyColorTime linear infinite;
+  }
+}
+.star.s16 {
+  @include starContainer(1.5px, 15%, 80%);
+  animation: starShine3 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(3px, 1px);
+    animation: starTwinkle3 $skyColorTime linear infinite;
+  }
+}
+.star.s17 {
+  @include starContainer(2px, 18%, 85%);
+  animation: starShine4 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle1 $skyColorTime linear infinite;
+  }
+}
+.star.s18 {
+  @include starContainer(1.5px, 8%, 88%);
+  animation: starShine2 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle4 $skyColorTime linear infinite;
+  }
+}
+.star.s19 {
+  @include starContainer(1.5px, 16%, 90%);
+  animation: starShine2 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle2 $skyColorTime linear infinite;
+  }
+}
+.star.s20 {
+  @include starContainer(1.5px, 6%, 96%);
+  animation: starShine3 $skyColorTime linear infinite;
+  & > div {
+    @include starInner(0, 0);
+    animation: starTwinkle4 $skyColorTime linear infinite;
+  }
+}
+
+@mixin shootingstar($w, $h, $t, $l) {
+  width: $w;
+  height: $h;
+  position: absolute;
+  top: $t;
+  left: $l;
+}
+@mixin shootingstarInner {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  transform: rotate(45deg);
+}
+@mixin shootingstarAfter {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: white;
+  border-radius: 5px;
+}
+@keyframes ssTranslate1 {
+  0%, 42% {transform: translate(0);}
+  45%, 100% {transform: translate(3vw, 3vw);}
+}
+@keyframes ssTranslate2 {
+  0%, 50% {transform: translate(0);}
+  54%, 100% {transform: translate(4vw, 4vw);}
+}
+@keyframes ssScale1 {
+  0%, 42% {transform: scaleX(0); transform-origin: left;}
+  45% {transform: scaleX(1); transform-origin: left;}
+  45.001% {transform: scaleX(1); transform-origin: right;}
+  48%, 100% {transform: scaleX(0); transform-origin: right;}
+}
+@keyframes ssScale2 {
+  0%, 50% {transform: scaleX(0); transform-origin: left;}
+  54% {transform: scaleX(1); transform-origin: left;}
+  54.001% {transform: scaleX(1); transform-origin: right;}
+  58%, 100% {transform: scaleX(0); transform-origin: right;}
+}
+
+.shootingstar.s1 {
+  @include shootingstar(10%, 1px, 14%, 10%);
+  animation: ssTranslate1 $skyColorTime linear infinite;
+  & > div {
+    @include shootingstarInner;
+    &::after {
+      @include shootingstarAfter;
+      animation: ssScale1 $skyColorTime linear infinite;
+    }
+  }
+}
+.shootingstar.s2 {
+  @include shootingstar(12%, 1px, 8%, 45%);
+  animation: ssTranslate1 $skyColorTime linear infinite;
+  & > div {
+    @include shootingstarInner;
+    &::after {
+      @include shootingstarAfter;
+      animation: ssScale1 $skyColorTime linear infinite;
+    }
+  }
+}
+.shootingstar.s3 {
+  @include shootingstar(11%, 1px, 10%, 70%);
+  animation: ssTranslate1 $skyColorTime linear infinite;
+  & > div {
+    @include shootingstarInner;
+    &::after {
+      @include shootingstarAfter;
+      animation: ssScale1 $skyColorTime linear infinite;
+    }
+  }
+}
+.shootingstar.s4 {
+  @include shootingstar(13%, 1px, 5%, 15%);
+  animation: ssTranslate2 $skyColorTime linear infinite;
+  & > div {
+    @include shootingstarInner;
+    &::after {
+      @include shootingstarAfter;
+      animation: ssScale2 $skyColorTime linear infinite;
+    }
+  }
+}
+.shootingstar.s5 {
+  @include shootingstar(11%, 1px, 12%, 55%);
+  animation: ssTranslate2 $skyColorTime linear infinite;
+  & > div {
+    @include shootingstarInner;
+    &::after {
+      @include shootingstarAfter;
+      animation: ssScale2 $skyColorTime linear infinite;
+    }
+  }
+}
+.shootingstar.s6 {
+  @include shootingstar(12%, 1px, 15%, 75%);
+  animation: ssTranslate2 $skyColorTime linear infinite;
+  & > div {
+    @include shootingstarInner;
+    &::after {
+      @include shootingstarAfter;
+      animation: ssScale2 $skyColorTime linear infinite;
+    }
+  }
+}
+
+
+//////////// CLOUDS ////////////////
+
+@keyframes cloudOpacity {
+  0%, 40% {opacity: 0.9;}
+  60%, 100% {opacity: 0.05;}
+}
+@keyframes cloudMove {
+  0% {transform: translate(-100%);}
+  100% {transform: translate(100%);}
+}
+@mixin cloudMarquee($time, $delay) {
+  animation: cloudMove $time linear infinite;
+  animation-delay: $delay;
+}
+
+.cloudRow {
+  width: 100%;
+  height: 80px;
+  @include smDown {height: 70px;}
+  position: absolute;
+  left: 0;
+  &.c1 {top: 2%;}
+  &.c2 {top: 5%;}
+  &.c3 {top: 10%; 
+    @include smDown {opacity: 0;}
+  }
+  &.c4 {top: 17%;}
+  & > .row {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    & > .r1, .r2 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0; left: 0;
+    }
+    & > .r1 {
+      @include cloudMarquee(100s, -50s);
+    }
+    & > .r2 {
+      @include cloudMarquee(100s, 0);
+    }
+  }
+}
+@mixin cloudShape($cloudSize) {
+  width: $cloudSize;
+  height: $cloudSize * 0.4;
+  border-radius: $cloudSize * 0.4;
+  background: radial-gradient(ellipse at top, white 50%, rgb(220, 236, 250));
+  opacity: 0.9;
+  position: relative;
+  top: $cloudSize * 0.35;
+  &::before, &::after {
+    border-radius: 50%;
+    background: radial-gradient(ellipse at bottom, white 70%, rgb(220, 236, 250));
+    position: absolute;
+  }
+  &::before {
+    width: $cloudSize * 0.3;
+    height: $cloudSize * 0.3;
+    bottom: 60%;
+    left: 15%;
+  }
+  &::after {
+    width: $cloudSize * 0.5;
+    height: $cloudSize * 0.5;
+    bottom: 45%;
+    right: 15%;
+  }
+}
+.cloud {
+  @include cloudShape(90px);
+  @include mdDown {
+    @include cloudShape(80px);
+  }
+  @include smDown {
+    @include cloudShape(70px);
+  }
+  animation: cloudOpacity $skyColorTimeHalf linear infinite alternate;
+  .c1 & {left: 50%;}
+  .c2 & {left: 90%;}
+  .c3 & {left: 40%;}
+  .c4 & {left: 10%;}
+}
+

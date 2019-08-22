@@ -1,0 +1,134 @@
+// * * * * * * * * * VARIABLES * * * * * * * * * * * * //
+
+$bgBlack: #1d1f20;
+$bookCoverBrown: #61300d;
+$navArrows: rgb(238, 68, 62);
+$navArrowsHover: #d50027;
+
+$fontCursive: 'Miltonian Tattoo', cursive;
+$fontFancy: 'Berkshire Swash', cursive;
+$fontContent: 'Copse', serif;
+
+$yellowBorder: goldenrod;
+$yellowMd: gold;
+$yellowDk: rgb(228, 183, 34);
+
+$bannerRodMd: #004ac9;
+$bannerRodDk: #003694;
+$bannerLt: beige;
+$bannerMd: #DCDCC6;
+$bannerDk: #C4C4B0;
+$bannerDker: #ABAB9A;
+
+
+// * * * * * * * * * GENERAL * * * * * * * * * * * * //
+
+@mixin minWidth($screen) {
+  @media (min-width: $screen + 'px') {
+    @content;
+  }
+}
+@mixin maxWidth($screen) {
+  @media (max-width: $screen + 'px') {
+    @content;
+  }
+}
+@mixin lgDown {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin mdDown {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+@mixin smDown {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin xsDown {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin centerItem {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// * * * * * * * * * BOOK PAGE * * * * * * * * * * * * //
+.bookPage {
+  height: 100%;
+  // background: rgb(240, 240, 240);
+}
+.pageContainer {
+  height: calc(100% - 50px);
+  // background: #DDDDDD;
+  position: relative;
+  overflow-y: auto;
+}
+h2.pageHeader {
+  font-family: $fontCursive;
+  font-size: 3em;
+  width: 94%;
+  margin: 60px 3% 40px;
+  padding: 0 3%;
+  letter-spacing: 3px;
+  // padding: 60px 5% 40px;
+  @include smDown {
+    width: 88%;
+    margin: 50px 6% 30px;
+    padding: 0 6%;
+    // padding: 50px 10% 30px;
+    font-size: 2.5em;
+  }
+}
+.pageContent {
+  height: auto;
+  padding: 0 2%;
+}
+
+
+// * * * * * * * * * BUTTONS * * * * * * * * * * * * //
+
+@mixin btnBase {
+  display: inline-block;
+  cursor: pointer;
+  &:focus {outline: none;}
+}
+@mixin btnSlideRight($color) {
+  @include btnBase;
+  color: $color;
+  border: 1px solid $color;
+  padding: 5px 10px;
+  background: linear-gradient(to right, $color 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  transition: all 0.5s;
+  &:hover {
+    color: initial;
+    background-position: left;
+  }
+}
+@mixin btnSlideLeft($color) {
+  @include btnBase;
+  color: $color;
+  border: 1px solid $color;
+  padding: 5px 10px;
+  background: linear-gradient(to left, $color 50%, transparent 50%);
+  background-size: 205% 100%;
+  background-position: 0%;
+  transition: all 0.5s;
+  &:hover {
+    color: initial;
+    background-position: 99%;
+  }
+}
+
+
+
