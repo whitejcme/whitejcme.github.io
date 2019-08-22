@@ -1,5 +1,19 @@
 # jiwonjulietyoon
 
+- jiwonjulietyoon.com
+- jiwonjulietyoon.github.io
+
+<br>
+
+## Project Timeline
+- Jun. 7, 2019: Register domain (jiwonjulietyoon.com)
+- Jun. 7 - Jun. 29, 2019: UI/UX Design & Hard-coding
+- Jul. 27 - Aug. 22, 2019: Rebuild project with Vue CLI
+
+
+<br>
+
+
 ## Added:
 
 <br>
