@@ -3,6 +3,9 @@
     <div class="pageContainer">
       <h2 class="pageHeader">About Me</h2>
       <div class="pageContent">
+        <div class="tmp">
+          Width: {{width}} px / Height: {{height}} px
+        </div>
         <div class="leftPage">
           <v-container>
             <v-layout row wrap justify-left>
@@ -95,6 +98,8 @@ export default {
           current: false
         }
       ],
+      width: 0,
+      height: 0,
     }
   },
   methods: {
@@ -106,6 +111,10 @@ export default {
       });
       text.current = true;
     }
+  },
+  mounted() {
+    this.width = $(window).width();
+    this.height = $(window).height();
   }
 }
 </script>
