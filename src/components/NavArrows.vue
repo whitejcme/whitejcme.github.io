@@ -45,7 +45,7 @@ nav {
     height: 15px;
     position: absolute;
     bottom: 100%; left: 0;
-    background: linear-gradient(to bottom, transparent, white);
+    background: linear-gradient(to bottom, $transparent, white);
   }
 }
 .navBtnDisabled {display: none;}

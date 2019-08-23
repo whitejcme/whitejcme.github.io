@@ -65,7 +65,7 @@ export default {
     height: 50px;
     position: absolute;
     top: 12px; left: 12px;
-    background: linear-gradient(to bottom, white 66%, transparent);
+    background: linear-gradient(to bottom, white 66%, $transparent);
     @include xsDown {
       width: calc(100% - 20px);
       top: 10px; left: 10px;
