@@ -70,7 +70,8 @@ Vue.use(VuePageTransition);
 - Viewport size for mobile/tablet devices:
   - Samsung Galaxy A7: 360px * 560px
   - Samsung Galaxy S10 5G: 412px * 725px
-  - Iphone XR: 414px * 722px
+  - iPhone XR: 414px * 722px
+  - iPad 9.7-in 6th Gen: 768px * 915px
 
 
 

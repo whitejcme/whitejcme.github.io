@@ -3,9 +3,6 @@
     <div class="pageContainer">
       <h2 class="pageHeader">About Me</h2>
       <div class="pageContent">
-        <div class="tmp">
-          Width: {{width}} px / Height: {{height}} px
-        </div>
         <div class="leftPage">
           <v-container>
             <v-layout row wrap justify-left>
@@ -97,9 +94,7 @@ export default {
           blurb: 'My academic background was originally in the social sciences, with a B.A in International Relations and Communication. Although I’m now pursuing a career in the IT sector, my two majors still greatly contribute to how I interpret the world around me.',
           current: false
         }
-      ],
-      width: 0,
-      height: 0,
+      ]
     }
   },
   methods: {
@@ -111,10 +106,6 @@ export default {
       });
       text.current = true;
     }
-  },
-  mounted() {
-    this.width = $(window).width();
-    this.height = $(window).height();
   }
 }
 </script>
