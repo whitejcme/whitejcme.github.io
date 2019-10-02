@@ -1,7 +1,7 @@
 # jiwonjulietyoon
 
 - [jiwonjulietyoon.com](https://www.jiwonjulietyoon.com)
-- [jiwonjulietyoon.github.io](https://jiwonjulietyoon.github.io/)
+- [jiwonjulietyoon.github.io/portfolio](https://jiwonjulietyoon.github.io/portfolio)
 
 <br>
 
