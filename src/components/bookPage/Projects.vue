@@ -11,7 +11,8 @@
             class="projectFlex"
           >
             <div class="projectBox">
-              <img :src="require(`@/assets/projects/${p.img}`)" alt="Project Overview">
+              <!-- <img :src="require(`@/assets/projects/${p.img}`)" alt="Project Overview"> -->
+              <img :src="p.img" alt="Project Overview">
               <div class="projectInfo">
                 <div class="details">
                   <div class="Title">{{p.title}}</div>
@@ -55,9 +56,17 @@ export default {
           id: 1,
           title: 'Movie Recommendation App',
           info: '[May 2019] Movie Recommendation Web Service (SPA) / Built on Django & Python via c9.io / Vue.js, Axios',
-          img: "prj1_overview.png",
+          img: "https://firebasestorage.googleapis.com/v0/b/jiwonjuliet.appspot.com/o/jiwonjulietyoon.com%2Fmovie-recommendation-prj-overview.png?alt=media&token=4bc40135-7f03-4e64-915d-14903aadbfa4",
           more: 'https://drive.google.com/drive/folders/1nF4oy4G7vFhJsOuhYuLx8J7F-98qmicc?usp=sharing',
           git: 'https://github.com/ChangmoKang/PJT'
+        },
+        {
+          id: 2,
+          title: 'KakaoTalk Clone Chatbot',
+          info: '[Sep-Oct 2019] Kakao clone chatroom with Vue.js, Firebase (chatbot built on Python, Flask, Slack API)',
+          img: "https://firebasestorage.googleapis.com/v0/b/jiwonjuliet.appspot.com/o/jiwonjulietyoon.com%2Fkakao-clone-prj-overview.png?alt=media&token=10c555e6-d97f-4e2e-ab94-ce312558beb5",
+          more: 'https://jiwonjulietyoon.github.io/kakao-slackbot/',
+          git: 'https://github.com/jiwonjulietyoon/kakao-slackbot'
         },
       ]
     }
