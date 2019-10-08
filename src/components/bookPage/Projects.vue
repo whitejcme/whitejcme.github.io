@@ -65,8 +65,8 @@ export default {
           title: 'KakaoTalk Clone Chatbot',
           info: '[Sep-Oct 2019] Kakao clone chatroom with Vue.js, Firebase (chatbot built on Python, Flask, Slack API)',
           img: "https://firebasestorage.googleapis.com/v0/b/jiwonjuliet.appspot.com/o/jiwonjulietyoon.com%2Fkakao-clone-prj-overview.png?alt=media&token=10c555e6-d97f-4e2e-ab94-ce312558beb5",
-          more: 'https://jiwonjulietyoon.github.io/kakao-slackbot/',
-          git: 'https://github.com/jiwonjulietyoon/kakao-slackbot'
+          more: 'https://kakao-slackbot.firebaseapp.com/',
+          git: 'https://github.com/jiwonjulietyoon/Kakao-Slackbot'
         },
       ]
     }
