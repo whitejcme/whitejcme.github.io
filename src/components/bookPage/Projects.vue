@@ -68,6 +68,14 @@ export default {
           more: 'https://kakao-slackbot.firebaseapp.com/',
           git: 'https://github.com/jiwonjulietyoon/Kakao-Slackbot'
         },
+        {
+          id: 3,
+          title: 'Recruit Map',
+          info: '[Oct-Nov 2019] Recruiting companies & open job position info displayed on a map',
+          img: "https://i.imgur.com/pIHqf7i.png",
+          more: 'http://www.recruitmap.ninja/',
+          git: 'https://github.com/jiwonjulietyoon/Recruit_Map'
+        },
       ]
     }
   }
